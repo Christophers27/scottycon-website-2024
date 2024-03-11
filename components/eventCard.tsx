@@ -27,7 +27,7 @@ export default function EventCard({
 
   return (
     <div
-      className="bg-scottycon-foreground p-4 m-4 rounded-xl shadow-lg text-scottycon-text"
+      className="bg-scottycon-foreground p-4 m-4 rounded-xl shadow-lg text-scottycon-text min-w-[20rem]"
       onClick={handleClick}
     >
       <h2 className="font-bold text-lg border-b border-scottycon-text mb-2">

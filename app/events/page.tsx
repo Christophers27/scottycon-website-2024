@@ -1,11 +1,13 @@
 import React from "react";
-import { events } from "@/lib/data";
+import SectionHeader from "@/components/sectionHeader";
 import EventCard from "@/components/eventCard";
+import { events } from "@/lib/data";
 
-export default function Events() {
+export default function EventsPage() {
   return (
-    <section className="bg-scottycon-background rounded-xl p-4 m-4 text-scottycon-text max-w-[50rem]">
-      <h1 className="font-semibold text-2xl text-center">Events</h1>
+    <div className="flex flex-col flex-1 bg-scottycon-background rounded-t-xl p-8 text-scottycon-text items-center">
+      <SectionHeader>Events</SectionHeader>
+
       <ul>
         {events.map((event) => {
           if (Date.now() < Date.parse(`2024-03-23T${event.endTime}:00`)) {
@@ -13,6 +15,6 @@ export default function Events() {
           }
         })}
       </ul>
-    </section>
+    </div>
   );
 }

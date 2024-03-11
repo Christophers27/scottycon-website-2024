@@ -3,6 +3,7 @@ import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} bg-scottycon-background`}>
+      <body
+        className={`${quicksand.className} bg-scottycon-background min-h-screen flex flex-col`}
+      >
         <Image
           src="/scottyconBackground.png"
           alt="ScottyCon 2024 Background"
@@ -29,6 +32,7 @@ export default function RootLayout({
         />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
