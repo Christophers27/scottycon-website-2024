@@ -25,8 +25,7 @@ export default function RootLayout({
           fill={true}
           quality={95}
           priority={true}
-          objectFit="cover"
-          className="z-[-999]"  // Set the z-index to extremely low value so it's always in the background
+          className="z-[-999] object-cover" // Set the z-index to extremely low value so it's always in the background
         />
         <Header />
         {children}
