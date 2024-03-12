@@ -1,6 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { BiSolidHome, BiSolidCalendarEvent } from "react-icons/bi";
+import {
+  BiSolidHome,
+  BiSolidCalendarEvent,
+  BiSolidMapAlt,
+} from "react-icons/bi";
 
 export default function Footer() {
   return (
@@ -9,9 +13,16 @@ export default function Footer() {
         <BiSolidHome className="size-6" />
         <p className="text-xs">Home</p>
       </Link>
-      <Link className="flex flex-col items-center justify-center" href="/events">
+      <Link
+        className="flex flex-col items-center justify-center"
+        href="/events"
+      >
         <BiSolidCalendarEvent className="size-6" />
         <p className="text-xs">Events</p>
+      </Link>
+      <Link className="flex flex-col items-center justify-center" href="/map">
+        <BiSolidMapAlt className="size-6" />
+        <p className="text-xs">Map</p>
       </Link>
     </div>
   );
