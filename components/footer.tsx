@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="bg-scottycon-foreground flex p-2 items-center justify-evenly">
+    <div className="bg-scottycon-foreground flex p-2 items-center justify-evenly sticky bottom-0">
       <Link className="flex flex-col items-center justify-center" href="/">
         <BiSolidHome className="size-6" />
         <p className="text-xs">Home</p>
