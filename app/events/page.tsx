@@ -20,7 +20,7 @@ export default function EventsPage() {
         type="text"
         placeholder="Search by event name"
         onChange={(e) => handleSearch(e.target.value)}
-        className="bg-scottycon-foreground m-4 p-4 rounded-full outline-none shadow-lg"
+        className="bg-scottycon-foreground m-4 px-8 py-4 rounded-full outline-none shadow-lg"
       />
 
       <ul>

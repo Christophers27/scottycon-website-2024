@@ -46,22 +46,22 @@ export default function EventCard({
       {clicked && (
         <>
           <div className="flex gap-2 items-center">
-            <BiSolidPurchaseTag />
+            <BiSolidPurchaseTag className="min-w-4" />
             <p>{type}</p>
           </div>
           <div className="flex gap-2 items-center">
-            <BiSolidTimeFive />
+            <BiSolidTimeFive className="min-w-4" />
             <p>
               {startTime} - {endTime}
             </p>
           </div>
           <div className="flex gap-2 items-center">
-            <BiSolidMap />
+            <BiSolidMap className="min-w-4" />
             <p>{location}</p>
           </div>
-          <div className="flex gap-2 items-center">
-            <BiSolidDetail />
-            <p>{description}</p>
+          <div className="flex gap-2">
+            <BiSolidDetail className="min-w-4 mt-1" />
+            <p className="whitespace-pre-wrap">{description}</p>
           </div>
         </>
       )}
