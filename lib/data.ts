@@ -89,7 +89,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     location: "Kirr Commons (Black Chairs)",
   },
   {
-    name: "Cosplay Cafe",
+    name: "Cosplay Cafe (Lunch)",
     description:
       "Come to Danforth Lounge to enjoy bentos served by your favorite characters! We will have chicken karaage, tonkatsu, and unadon meals, as well as freshly brewed coffee and various snacks.",
     type: "Food",
@@ -98,7 +98,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     location: "Danforth Lounge",
   },
   {
-    name: "Cosplay Cafe",
+    name: "Cosplay Cafe (Dinner)",
     description:
       "Come to Danforth Lounge to enjoy bentos served by your favorite characters! We will have chicken karaage, tonkatsu, and unadon meals, as well as freshly brewed coffee and various snacks.",
     type: "Food",
