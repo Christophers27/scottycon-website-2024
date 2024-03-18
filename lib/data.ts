@@ -151,14 +151,6 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     endTime: "14:00",
     location: "McConomy Auditorium",
   },
-  // {
-  //   name: "ScottyCon Idol Festival",
-  //   description: "",
-  //   type: "Performance",
-  //   startTime: "14:00",
-  //   endTime: "15:45",
-  //   loaction: "Rangos",
-  // },
   {
     name: "KPDC (ScottyFest)",
     description:
@@ -305,6 +297,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     name: "Shounen Deconstructed",
     description:
       "Shounen media has changed a lot over the years - or has it? Get to the bottom of what makes shounen SHOUNEN in “Shounen: Deconstructed”!",
+    type: "Panel",
     startTime: "12:30",
     endTime: "13:30",
     location: "Dowd",
