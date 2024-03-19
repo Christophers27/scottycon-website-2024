@@ -155,7 +155,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     name: "CMU vs. Pitt Crew Battle",
     description:
       "Top Super Smash Bros. Ultimate players from CMU and Pitt face off in a 6v6 team event! Come watch action-packed, high level Smash with live commentary catered towards fans of all levels.",
-    type: "Activities",
+    type: "Activity",
     startTime: "11:30",
     endTime: "12:45",
     location: "Danforth Conference Room",
@@ -173,7 +173,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     name: "KPDC (ScottyFest)",
     description:
       "Watch KPDC dancers perform popular Japanese and English releases of your favorite Kpop groups!!",
-    type: "Peformance",
+    type: "Performance",
     startTime: "14:00",
     endTime: "14:10",
     location: "Rangos",
@@ -428,4 +428,4 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     endTime: "21:00",
     location: "Pake",
   },
-] as const;
+];
