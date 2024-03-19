@@ -5,6 +5,12 @@ import SectionHeader from "@/components/sectionHeader";
 import SectionDivider from "@/components/sectionDivider";
 
 export default function Home() {
+  const upcomingEvents = events.filter(
+    (event) =>
+      Date.now() < Date.parse(`2024-03-23T${event.endTime}:00`) &&
+      Date.parse(`2024-03-23T${event.startTime}:00`) < Date.now() + 3600000
+  );
+
   return (
     <div className="flex flex-col flex-1 bg-scottycon-background rounded-t-xl p-8 text-scottycon-text items-center">
       <section className="flex flex-col my-8 gap-2 max-w-[45rem]">
@@ -19,12 +25,15 @@ export default function Home() {
       <section className="my-8">
         <SectionHeader>Upcoming Events</SectionHeader>
         <ul className="">
-          {events.map((event) => {
-            if (Date.now() < Date.parse(`2024-03-23T${event.endTime}:00`) && Date.parse(`2024-03-23T${event.startTime}:00`) < Date.now() + 3600000){
-              // Show events that are currently happening or will start within the next hour
-              return <EventCard key={event.name} {...event} />;
-            }
-          })}
+          {upcomingEvents.length > 0 ? (
+            upcomingEvents.map((event) => (
+              <EventCard key={event.name} {...event} />
+            ))
+          ) : (
+            <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-xl rounded-xl">
+              No upcoming events, sorry!
+            </p>
+          )}
         </ul>
       </section>
     </div>
