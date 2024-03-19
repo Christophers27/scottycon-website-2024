@@ -125,6 +125,24 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     location: "Rangos 1",
   },
   {
+    name: "Japanese Student Association (JSA)",
+    description:
+      "CMU JSA will be selling homemade Dorayaki (Japanese red bean pancakes)! Please come and support our members' hard work and care.",
+    type: "Food",
+    startTime: "11:00",
+    endTime: "18:00",
+    location: "Rangos 1",
+  },
+  {
+    name: "Awareness of Roots in Chinese Culture (ARCC)",
+    description:
+      "Feeling hungry? Come swing by the ARCC tables for some delicious fried pork and leek dumplings, hand-cooked by our members on the spot!",
+    type: "Food",
+    startTime: "11:00",
+    endTime: "18:00",
+    location: "Rangos 1",
+  },
+  {
     name: "Grapes are Green",
     description:
       "Come grab some Asian-inspired baked goods and desserts. We’ll be selling favorites such as mochi donuts, matcha tres leches, dango, and many, many more!",
@@ -140,7 +158,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     type: "Activities",
     startTime: "11:30",
     endTime: "12:45",
-    location: "McConomy Auditorium",
+    location: "Danforth Conference Room",
   },
   {
     name: "Maria Marionette",
@@ -241,7 +259,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     location: "Rangos",
   },
   {
-    name: "Rakumaroo Performance",
+    name: "Violet Evergarden the Musical",
     description:
       "Join us as we take a walk through Violet Evergarden's life as an auto-memory doll. After persevering through numerous hardships during the war, she now fights to learn about love and find the one who she holds most dear. ",
     type: "Performance",
