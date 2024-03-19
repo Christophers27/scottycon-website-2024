@@ -5,6 +5,8 @@ import SectionHeader from "@/components/sectionHeader";
 import EventCard from "@/components/eventCard";
 import { events } from "@/lib/data";
 
+import { BiChevronDown } from "react-icons/bi";
+
 export default function EventsPage() {
   const [search, setSearch] = useState("");
   const [collapsedTypes, setCollapsedTypes] = useState<string[]>([]);
@@ -50,9 +52,18 @@ export default function EventsPage() {
             <li
               key={type}
               className="bg-scottycon-foreground/[0.6] p-4 rounded-xl my-4"
-              onClick={() => handleCollapse(type)}
             >
-              <h2 className="text-2xl font-bold">{type}</h2>
+              <div
+                className="flex gap-2 active:bg-scottycon-foreground/[0.8] transition rounded-full w-min px-4 justify-center items-center"
+                onClick={() => handleCollapse(type)}
+              >
+                <h2 className="text-2xl font-bold">{type}</h2>
+                <BiChevronDown
+                  className={`size-6 transform ${
+                    collapsedTypes.includes(type) && "rotate-180"
+                  }`}
+                />
+              </div>
               {!collapsedTypes.includes(type) && (
                 <ul>
                   {events
