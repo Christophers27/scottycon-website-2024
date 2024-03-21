@@ -13,16 +13,16 @@ export default function Home() {
 
   return (
     <div className="flex flex-col flex-1 bg-scottycon-background rounded-t-xl p-8 text-scottycon-text items-center">
-      <section className="flex flex-col my-8 gap-2 max-w-[45rem]">
+      <section className="flex flex-col mt-8 max-w-[45rem]">
         <SectionHeader>Welcome to ScottyCon 2024!</SectionHeader>
-        <p className="text-center">
+        <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
           This is the digital booklet for ScottyCon 2024. Below you can see the
           upcoming events, and you can see all events and the map in the
           navigation bar.
         </p>
       </section>
       <SectionDivider />
-      <section className="my-8">
+      <section className="mt-8">
         <SectionHeader>Upcoming Events</SectionHeader>
         <ul className="">
           {upcomingEvents.length > 0 ? (
@@ -30,11 +30,20 @@ export default function Home() {
               <EventCard key={event.name} {...event} />
             ))
           ) : (
-            <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-xl rounded-xl">
+            <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
               No upcoming events, sorry!
             </p>
           )}
         </ul>
+      </section>
+      <SectionDivider />
+      <section className="flex flex-col mt-8 max-w-[45rem]">
+        <SectionHeader>Lost and Found</SectionHeader>
+        <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
+          If you have lost something, the lost and found is located at the merch
+          table. If you have found something, please bring it to the lost and
+          found!
+        </p>
       </section>
     </div>
   );
