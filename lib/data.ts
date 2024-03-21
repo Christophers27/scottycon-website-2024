@@ -188,21 +188,12 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     location: "Rangos",
   },
   {
-    name: "Mara Barron (ScottyFest)",
-    description:
-      "Come enjoy one of K-pop’s hardest tutting based black and white themed dances called naughty by Seulgi x Irene from Red Velvet. ",
-    type: "Performance",
-    startTime: "14:20",
-    endTime: "14:25",
-    location: "Rangos",
-  },
-  {
     name: "Monica Geng - Drop Pop Candy (ScottyFest)",
     description:
       "Produced by Giga-P, Drop Pop Candy is an upbeat Vocaloid composition featuring the talents of two virtual vocalists and two real-life singers, complemented by a charming dance performance.",
     type: "Performance",
-    startTime: "14:25",
-    endTime: "14:30",
+    startTime: "14:20",
+    endTime: "14:25",
     location: "Rangos",
   },
   {
@@ -210,8 +201,8 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     description:
       "Please join us in the vibrant choreography and irresistible charm of the J-pop dance performance -- Happy!! Snow World!!",
     type: "Performance",
-    startTime: "14:30",
-    endTime: "14:35",
+    startTime: "14:25",
+    endTime: "14:30",
     location: "Rangos",
   },
   {
@@ -219,8 +210,8 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     description:
       "Yui is the chaotic little sister that everyone would want to have! She's a huge fan of idols and technology so she mixed both of them to become a Virtual Idol! ",
     type: "Performance",
-    startTime: "14:35",
-    endTime: "14:40",
+    startTime: "14:30",
+    endTime: "14:35",
     location: "Rangos",
   },
   {
@@ -228,16 +219,16 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     description:
       "My Life as a Cosplay Performer: Rin brings back her award-winning performances from cons past and stories about cosplaying.",
     type: "Performance",
-    startTime: "14:40",
-    endTime: "14:45",
+    startTime: "14:35",
+    endTime: "14:40",
     location: "Rangos",
   },
   {
     name: "Monica Geng - loveit (ScottyFest)",
     description: "A rabbit happily looked up at the moon.",
     type: "Performance",
-    startTime: "14:45",
-    endTime: "14:50",
+    startTime: "14:40",
+    endTime: "14:45",
     location: "Rangos",
   },
   {
@@ -245,8 +236,8 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     description:
       "Alex Pinku is a performance idol, artist and dancer inspired by Japanese idols. Through their performances, they hope to share the unique and energetic idol subculture with everyone.",
     type: "Performance",
-    startTime: "14:50",
-    endTime: "15:20",
+    startTime: "14:45",
+    endTime: "15:15",
     location: "Rangos",
   },
   {
