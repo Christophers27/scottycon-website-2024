@@ -52,8 +52,7 @@ export default function Home() {
       <section className="flex flex-col mt-8 max-w-[45rem]">
         <SectionHeader>Wi-Fi</SectionHeader>
         <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
-          ScottyCon 2024 has free Wi-Fi! Connect to CMU-GUEST with the password
-          "QALM3BA5"
+          ScottyCon 2024 has free Wi-Fi! Connect to CMU-GUEST with your email and QALM3BA5 as the password.
         </p>
       </section>
     </div>

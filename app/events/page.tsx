@@ -9,7 +9,7 @@ import { BiChevronDown } from "react-icons/bi";
 
 export default function EventsPage() {
   const [search, setSearch] = useState("");
-  const [collapsedTypes, setCollapsedTypes] = useState<string[]>([]);
+  const [collapsedTypes, setCollapsedTypes] = useState<string[]>(["Activity", "Food", "Panel", "Performance"]);
 
   const groupByType = events.reduce(
     (groups: Record<string, typeof events>, event) => {
