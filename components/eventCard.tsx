@@ -8,6 +8,7 @@ import {
   BiSolidDetail,
   BiSolidTimeFive,
 } from "react-icons/bi";
+import Image from "next/image";
 
 type eventCardProps = (typeof events)[number];
 
@@ -18,6 +19,7 @@ export default function EventCard({
   startTime,
   endTime,
   location,
+  img,
 }: eventCardProps) {
   const [clicked, setClicked] = useState(false);
 
@@ -63,6 +65,13 @@ export default function EventCard({
             <BiSolidDetail className="min-w-4 mt-1" />
             <p className="whitespace-pre-wrap">{description}</p>
           </div>
+          {img && (
+            <Image
+              src={img}
+              alt={name}
+              className="py-4 object-contain max-h-96"
+            />
+          )}
         </>
       )}
     </div>

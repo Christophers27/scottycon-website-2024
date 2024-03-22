@@ -1,3 +1,12 @@
+import fifteenkImg from "@/public/15k.png";
+import agapeStardustsImg from "@/public/agape_stardusts.jpg";
+import alexPinkuImg from "@/public/alex_pinku.jpg";
+import katieSheskoImg from "@/public/Katie Shesko.png";
+import kawaiiNekoImg from "@/public/kawaii_neko_productions.png";
+import noodleGalImg from "@/public/n00dl3gal.jpg";
+import rakumarooImg from "@/public/rakumaroo.png";
+import yuiTennyoImg from "@/public/yui_tennyo.png";
+
 export const events = [
   {
     name: "Artist Alley",
@@ -213,6 +222,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "14:30",
     endTime: "14:35",
     location: "Rangos",
+    img: yuiTennyoImg,
   },
   {
     name: "Rin/Noodle (ScottyFest)",
@@ -222,6 +232,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "14:35",
     endTime: "14:40",
     location: "Rangos",
+    img: noodleGalImg,
   },
   {
     name: "Monica Geng - loveit (ScottyFest)",
@@ -239,6 +250,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "14:45",
     endTime: "15:15",
     location: "Rangos",
+    img: alexPinkuImg,
   },
   {
     name: "Masquerade",
@@ -257,6 +269,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "17:15",
     endTime: "17:45",
     location: "Rangos",
+    img: rakumarooImg,
   },
   {
     name: "J-Rock Cover Band Performance",
@@ -266,6 +279,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "18:00",
     endTime: "18:30",
     location: "Rangos",
+    img: fifteenkImg,
   },
   {
     name: "Flute Instrumental Performance",
@@ -275,6 +289,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "18:45",
     endTime: "19:15",
     location: "Rangos",
+    img: katieSheskoImg,
   },
   {
     name: "The Anime Band Performance",
@@ -319,6 +334,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "13:45",
     endTime: "14:30",
     location: "Dowd",
+    img: kawaiiNekoImg,
   },
   {
     name: "Not Your Momma's Magical Girls",
@@ -328,6 +344,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "14:45",
     endTime: "15:30",
     location: "Dowd",
+    img: kawaiiNekoImg,
   },
   {
     name: "The Magnificent 49ers and the Reinvention of Shoujo Manga",
@@ -373,6 +390,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
     startTime: "12:30",
     endTime: "13:30",
     location: "Connan",
+    img: agapeStardustsImg,
   },
   {
     name: "Left on the Shelf - Unadapted Manga",
