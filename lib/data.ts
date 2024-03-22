@@ -11,7 +11,7 @@ export const events = [
   {
     name: "Artist Alley",
     description:
-      "Come visit our selection of sixty-nine Carnegie Mellon artists selling original and fan merchandise!",
+      "Come visit our selection of sixty-nine Carnegie Mellon artists selling original and fan merchandise! Organized by Artist Alley Club (AAC).",
     type: "Activity",
     startTime: "11:00",
     endTime: "20:00",
@@ -19,7 +19,7 @@ export const events = [
   },
   {
     name: "Arcade Cabinets",
-    description: `ScottyCon's selection of rhythm game cabinets, provided by Ikigai Arcade.
+    description: `ScottyCon's selection of rhythm game cabinets, provided by Ikigai Arcade, and organized by the Rhythm Game Club (RGC).
 
 ​List of Cabinets:
   - MaiMai FiNALE
@@ -53,7 +53,7 @@ CMU Esports will be hosting a variety of fighting game tournaments at ScottyCon 
   },
   {
     name: "D&D and More",
-    description: `The CMU Role-Playing Games Association will run short 1-2 hours games to introduce people to D&D and other role-playing systems. Come and sign up, no prior experience needed!
+    description: `The CMU Role-Playing Games Association (RPGA) will run short 1-2 hours games to introduce people to D&D and other role-playing systems. Come and sign up, no prior experience needed!
 You can also come and see a showcase of different RPGs the club runs, learning more about what we do and a variety of RPGs.
     `,
     type: "Activity",
@@ -64,7 +64,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
   {
     name: "Crafts and Photobooth",
     description:
-      "Sew a Scotty dog plush and create perler bead designs with cosplay club! Also, visit our photobooth and take snazzy photos. Available all day during non-café hours.",
+      "Sew a Scotty dog plush and create perler bead designs with cosplay club! Also, visit our photobooth and take snazzy photos. Available all day during non-café hours. Organized by Cosplay@CMU",
     type: "Activity",
     startTime: "11:00",
     endTime: "21:00",
@@ -100,7 +100,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
   {
     name: "Cosplay Cafe (Lunch)",
     description:
-      "Come to Danforth Lounge to enjoy bentos served by your favorite characters! We will have chicken karaage, tonkatsu, and unadon meals, as well as freshly brewed coffee and various snacks.",
+      "Come to Danforth Lounge to enjoy bentos served by your favorite characters! We will have chicken karaage, tonkatsu, and unadon meals, as well as freshly brewed coffee and various snacks. Organized by Cosplay@CMU.",
     type: "Food",
     startTime: "12:00",
     endTime: "14:00",
@@ -109,16 +109,17 @@ You can also come and see a showcase of different RPGs the club runs, learning m
   {
     name: "Cosplay Cafe (Dinner)",
     description:
-      "Come to Danforth Lounge to enjoy bentos served by your favorite characters! We will have chicken karaage, tonkatsu, and unadon meals, as well as freshly brewed coffee and various snacks.",
+      "Come to Danforth Lounge to enjoy bentos served by your favorite characters! We will have chicken karaage, tonkatsu, and unadon meals, as well as freshly brewed coffee and various snacks. Organized by Cosplay@CMU.",
     type: "Food",
     startTime: "18:00",
     endTime: "20:00",
     location: "Danforth Lounge",
   },
   {
-    name: "Matcha Latte Fundraiser x Orbeez Game",
+    name: "Society of Asian Scientists and Engineers (SASE)",
     description:
-      "Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how many orbeez you can pick up with chopsticks within a few minutes!",
+      `Matcha Latte Fundraiser x Orbeez Game: 
+Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how many orbeez you can pick up with chopsticks within a few minutes! Organized by Society of Asian Scientists and Engineers (SASE).`,
     type: "Food",
     startTime: "11:00",
     endTime: "15:00",
@@ -255,7 +256,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
   {
     name: "Masquerade",
     description:
-      "A convention classic! Watch cosplayers from Carnegie Mellon and the Pittsburgh area show off their creations on stage as they compete for “Best in Show.” Craftsmanship categories will be judged separately before the event.",
+      "A convention classic! Watch cosplayers from Carnegie Mellon and the Pittsburgh area show off their creations on stage as they compete for “Best in Show.” Craftsmanship categories will be judged separately before the event. Organized by Cosplay@CMU.",
     type: "Performance",
     startTime: "16:00",
     endTime: "17:00",
