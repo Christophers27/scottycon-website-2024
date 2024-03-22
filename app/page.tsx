@@ -18,7 +18,7 @@ export default function Home() {
         <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
           Welcome to ScottyCon 2024! Feel free to explore the convention and
           enjoy the many events we have to offer, shown in the events page and
-          the upcoming events within the next hour below. If you can't find an
+          the upcoming events within the next hour below. If you cannot find an
           event, check the map on the map page. If you have any questions, feel
           free to ask any of our staff members, who are wearing the ScottyCon
           2024 t-shirts. Enjoy the convention!
@@ -43,16 +43,15 @@ export default function Home() {
       <section className="flex flex-col mt-8 max-w-[45rem]">
         <SectionHeader>Lost and Found</SectionHeader>
         <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
-          If you have lost something, the lost and found is located at the merch
-          table. If you have found something, please bring it to the lost and
-          found!
+          If you have lost something, the lost and found is located at the UC Info Desk on the first floor. If you have found something, please bring it there.
         </p>
       </section>
       <SectionDivider />
       <section className="flex flex-col mt-8 max-w-[45rem]">
         <SectionHeader>Wi-Fi</SectionHeader>
         <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
-          ScottyCon 2024 has free Wi-Fi! Connect to CMU-GUEST with your email and QALM3BA5 as the password.
+          ScottyCon 2024 has free Wi-Fi! Connect to CMU-GUEST with your email
+          and QALM3BA5 as the password.
         </p>
       </section>
     </div>
