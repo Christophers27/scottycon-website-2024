@@ -283,7 +283,8 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
   },
   {
     name: "Random Dance Play",
-    description: "Join the electrifying extravaganza of dance, where rhythm meets spontaneity! Join us at ScottyCon Random Dance Play, where every move is a surprise and every beat sparks a new energy. Hosted by the charismatic Nicole Korber, this event promises an unforgettable fusion of music, movement, and magic.",
+    description:
+      "Join the electrifying extravaganza of dance, where rhythm meets spontaneity! Join us at ScottyCon Random Dance Play, where every move is a surprise and every beat sparks a new energy. Hosted by the charismatic Nicole Korber, this event promises an unforgettable fusion of music, movement, and magic.",
     type: "Performance",
     startTime: "19:30",
     endTime: "20:00",
@@ -426,5 +427,14 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "11:00",
     endTime: "21:00",
     location: "Pake",
+  },
+  {
+    name: "Karaoke",
+    description:
+      "Join us for some open-mic karooke and chill! Sing along to your favorite anime hits or video game soundtracks.",
+    type: "Activity",
+    startTime: "19:00",
+    endTime: "21:00",
+    location: "Connan",
   },
 ];
