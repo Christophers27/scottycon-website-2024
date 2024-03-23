@@ -122,7 +122,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     type: "Food",
     startTime: "11:00",
     endTime: "15:00",
-    location: "Rangos 1",
+    location: "Rangos 3",
   },
   {
     name: "Hong Kong Student Association (HKSA)",
@@ -131,7 +131,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     type: "Food",
     startTime: "11:00",
     endTime: "21:00",
-    location: "Rangos 1",
+    location: "Rangos 3",
   },
   {
     name: "Japanese Student Association (JSA)",
@@ -140,7 +140,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     type: "Food",
     startTime: "11:00",
     endTime: "18:00",
-    location: "Rangos 1",
+    location: "Rangos 3",
   },
   {
     name: "Awareness of Roots in Chinese Culture (ARCC)",
@@ -149,7 +149,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     type: "Food",
     startTime: "11:00",
     endTime: "18:00",
-    location: "Rangos 1",
+    location: "Rangos 3",
   },
   {
     name: "Grapes are Green",
@@ -158,7 +158,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     type: "Food",
     startTime: "11:00",
     endTime: "17:00",
-    location: "Rangos 1",
+    location: "Rangos 3",
   },
   {
     name: "CMU vs. Pitt Crew Battle",
