@@ -282,8 +282,8 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     img: katieSheskoImg,
   },
   {
-    name: "The Anime Band Performance",
-    description: "Live Anime Tribute Band",
+    name: "Random Dance Play",
+    description: "Join the electrifying extravaganza of dance, where rhythm meets spontaneity! Join us at ScottyCon Random Dance Play, where every move is a surprise and every beat sparks a new energy. Hosted by the charismatic Nicole Korber, this event promises an unforgettable fusion of music, movement, and magic.",
     type: "Performance",
     startTime: "19:30",
     endTime: "20:00",
