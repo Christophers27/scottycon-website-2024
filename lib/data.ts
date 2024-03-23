@@ -263,16 +263,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     location: "Rangos",
   },
   {
-    name: "Violet Evergarden the Musical",
-    description:
-      "Join us as we take a walk through Violet Evergarden's life as an auto-memory doll. After persevering through numerous hardships during the war, she now fights to learn about love and find the one who she holds most dear. ",
-    type: "Performance",
-    startTime: "17:15",
-    endTime: "17:45",
-    location: "Rangos",
-    img: rakumarooImg,
-  },
-  {
     name: "J-Rock Cover Band Performance",
     description:
       "15K is a band that covers songs from your favorite Japanese artists and anime.",
