@@ -117,8 +117,7 @@ You can also come and see a showcase of different RPGs the club runs, learning m
   },
   {
     name: "Society of Asian Scientists and Engineers (SASE)",
-    description:
-      `Matcha Latte Fundraiser x Orbeez Game: 
+    description: `Matcha Latte Fundraiser x Orbeez Game: 
 Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how many orbeez you can pick up with chopsticks within a few minutes! Organized by Society of Asian Scientists and Engineers (SASE).`,
     type: "Food",
     startTime: "11:00",
@@ -198,7 +197,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     location: "Rangos",
   },
   {
-    name: "Monica Geng - Drop Pop Candy (ScottyFest)",
+    name: "Lydia Yang, Helen Huang, Monica Geng, Miffy Liu - Drop Pop Candy (ScottyFest)",
     description:
       "Produced by Giga-P, Drop Pop Candy is an upbeat Vocaloid composition featuring the talents of two virtual vocalists and two real-life singers, complemented by a charming dance performance.",
     type: "Performance",
@@ -207,7 +206,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     location: "Rangos",
   },
   {
-    name: "Miffy Liu (ScottyFest)",
+    name: "Happy Snow World (ScottyFest)",
     description:
       "Please join us in the vibrant choreography and irresistible charm of the J-pop dance performance -- Happy!! Snow World!!",
     type: "Performance",
@@ -226,7 +225,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     img: yuiTennyoImg,
   },
   {
-    name: "Rin/Noodle (ScottyFest)",
+    name: "n00dl3gal (ScottyFest)",
     description:
       "My Life as a Cosplay Performer: Rin brings back her award-winning performances from cons past and stories about cosplaying.",
     type: "Performance",
@@ -236,7 +235,7 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     img: noodleGalImg,
   },
   {
-    name: "Monica Geng - loveit (ScottyFest)",
+    name: "Monica Geng, Ruby Shen - loveit (ScottyFest)",
     description: "A rabbit happily looked up at the moon.",
     type: "Performance",
     startTime: "14:40",
