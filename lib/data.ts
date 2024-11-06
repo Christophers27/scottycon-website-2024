@@ -1,11 +1,11 @@
-import fifteenkImg from "@/public/15k.png";
-import agapeStardustsImg from "@/public/agape_stardusts.jpg";
-import alexPinkuImg from "@/public/alex_pinku.jpg";
-import katieSheskoImg from "@/public/Katie Shesko.png";
-import kawaiiNekoImg from "@/public/kawaii_neko_productions.png";
-import noodleGalImg from "@/public/n00dl3gal.jpg";
-import rakumarooImg from "@/public/rakumaroo.png";
-import yuiTennyoImg from "@/public/yui_tennyo.png";
+import fifteenkImg from "@/public/images/15k.png";
+import agapeStardustsImg from "@/public/images/agape_stardusts.jpg";
+import alexPinkuImg from "@/public/images/alex_pinku.jpg";
+import katieSheskoImg from "@/public/images/Katie Shesko.png";
+import kawaiiNekoImg from "@/public/images/kawaii_neko_productions.png";
+import noodleGalImg from "@/public/images/n00dl3gal.jpg";
+import rakumarooImg from "@/public/images/rakumaroo.png";
+import yuiTennyoImg from "@/public/images/yui_tennyo.png";
 
 export const events = [
   {
