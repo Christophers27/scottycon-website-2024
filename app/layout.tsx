@@ -4,6 +4,7 @@ import "./globals.css";
 import Image from "next/image";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import InstallPrompt from "@/components/install";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -69,6 +70,7 @@ export default function RootLayout({
           priority={true}
           className="z-[-999] object-cover" // Set the z-index to extremely low value so it's always in the background
         />
+        <InstallPrompt />
         <Header />
         {children}
         <Footer />

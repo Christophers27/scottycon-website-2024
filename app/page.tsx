@@ -3,6 +3,7 @@ import { events } from "@/lib/data";
 import EventCard from "@/components/eventCard";
 import SectionHeader from "@/components/sectionHeader";
 import SectionDivider from "@/components/sectionDivider";
+import SendNotifications from "@/components/sendNotifications";
 
 export default function Home() {
   const upcomingEvents = events.filter(
@@ -15,6 +16,7 @@ export default function Home() {
     <div className="flex flex-col flex-1 bg-scottycon-background rounded-t-xl p-8 text-scottycon-text items-center">
       <section className="flex flex-col mt-8 max-w-[45rem]">
         <SectionHeader>Welcome to ScottyCon 2024!</SectionHeader>
+        <SendNotifications />
         <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
           Welcome to ScottyCon 2024! Feel free to explore the convention and
           enjoy the many events we have to offer, shown in the events page and
@@ -43,7 +45,9 @@ export default function Home() {
       <section className="flex flex-col mt-8 max-w-[45rem]">
         <SectionHeader>Lost and Found</SectionHeader>
         <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
-          If you have lost something, the lost and found is located at the UC Info Desk on the first floor. If you have found something, please bring it there.
+          If you have lost something, the lost and found is located at the UC
+          Info Desk on the first floor. If you have found something, please
+          bring it there.
         </p>
       </section>
       <SectionDivider />
