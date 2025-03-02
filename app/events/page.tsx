@@ -101,6 +101,7 @@ export default function EventsPage() {
                           .includes(search.toLowerCase())) &&
                       (filterType === "" || event.type === filterType)
                   )
+                  .sort((a, b) => a.endTime.localeCompare(b.endTime))
                   .map((event) => (
                     <EventCard key={event.name} {...event} />
                   ))}
