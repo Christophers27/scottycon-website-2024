@@ -43,7 +43,9 @@ export default function Home() {
       <section className="flex flex-col mt-8 max-w-[45rem]">
         <SectionHeader>Lost and Found</SectionHeader>
         <p className="text-center bg-scottycon-foreground m-8 px-8 py-4 text-l rounded-xl">
-          If you have lost something, the lost and found is located at the UC Info Desk on the first floor. If you have found something, please bring it there.
+          If you have lost something, the lost and found is located at the UC
+          Info Desk on the first floor. If you have found something, please
+          bring it there.
         </p>
       </section>
       <SectionDivider />
