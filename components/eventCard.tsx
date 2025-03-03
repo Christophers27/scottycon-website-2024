@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { events } from "@/lib/data";
-import { getFavorites, setFavorites } from "@/lib/helpers";
 import {
   BsFillGeoAltFill,
   BsPersonWalking,
@@ -12,6 +11,7 @@ import {
   BsStarFill,
 } from "react-icons/bs";
 import { FaUtensils } from "react-icons/fa";
+import { useFavorites } from "@/context/favoritesContext";
 
 type eventCardProps = (typeof events)[number];
 
@@ -25,23 +25,14 @@ export default function EventCard({
   img,
 }: eventCardProps) {
   const [expanded, setExpanded] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(getFavorites().includes(name));
+  const { favorites, toggleFavorite, isInitialized } = useFavorites(); // Get isInitialized
 
-  const toggleFavorite = (event: React.MouseEvent) => {
+  // Derive isFavorite only after initialization
+  const isFavorite = isInitialized && favorites.includes(name);
+
+  const handleToggle = (event: React.MouseEvent) => {
     event.stopPropagation();
-    const favorites = getFavorites();
-
-    if (isFavorite) {
-      const newFavorites = favorites.filter(
-        (favorite: string) => favorite !== name
-      );
-      setFavorites(newFavorites);
-    } else {
-      favorites.push(name);
-      setFavorites(favorites);
-    }
-
-    setIsFavorite(!isFavorite);
+    toggleFavorite(name);
   };
 
   return (
@@ -53,13 +44,15 @@ export default function EventCard({
       <div className="flex flex-col items-start basis-4/5 px-2 py-2 border-b border-black/10">
         <div className="flex align-top gap-1 w-full">
           <h2 className="font-semibold">{name}</h2>
-          <button onClick={toggleFavorite} className="ml-auto">
-            {isFavorite ? (
-              <BsStarFill className="text-yellow-500" />
-            ) : (
-              <BsStar />
-            )}
-          </button>
+          {isInitialized && (
+            <button onClick={handleToggle} className="ml-auto">
+              {favorites.includes(name) ? (
+                <BsStarFill className="text-yellow-500" />
+              ) : (
+                <BsStar />
+              )}
+            </button>
+          )}
         </div>
         <p className="text-scottycon-text/50 text-sm flex items-center gap-1">
           <BsFillGeoAltFill className="inline" /> {location}

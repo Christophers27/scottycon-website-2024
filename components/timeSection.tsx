@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import EventCard from "./eventCard";
 import { events } from "@/lib/data";
-import { getFavorites } from "@/lib/helpers";
+import { useFavorites } from "@/context/favoritesContext";
 
 interface TimeSectionProps {
   time: string;
@@ -19,7 +19,9 @@ export default function TimeSection({
   filterType,
 }: TimeSectionProps) {
   const filteredEvents = timeEvents.filter((event) => {
-    const favorites = getFavorites();
+    const { favorites } = useFavorites();
+
+
     const isFavorite = favorites.includes(event.name);
 
     const matchesSearch =
