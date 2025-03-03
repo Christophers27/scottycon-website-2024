@@ -30,9 +30,7 @@ export default function EventCard({
         <p className="text-scottycon-text/50">{endTime}</p>
       </div>
       <div className="flex flex-col items-start basis-4/5 px-2 py-2 border-b border-black/10">
-        <h2 className="font-semibold">
-          {name}
-        </h2>
+        <h2 className="font-semibold">{name}</h2>
         <p className="text-scottycon-text/50 text-sm flex items-center gap-1">
           <BsFillGeoAltFill className="inline" /> {location}
         </p>
