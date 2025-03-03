@@ -18,16 +18,17 @@ export default function TimeSection({
   search,
   filterType,
 }: TimeSectionProps) {
+  const { favorites } = useFavorites();
+
   const filteredEvents = timeEvents.filter((event) => {
-    const { favorites } = useFavorites();
-
-
     const isFavorite = favorites.includes(event.name);
 
     const matchesSearch =
       event.name.toLowerCase().includes(search.toLowerCase()) ||
       event.description.toLowerCase().includes(search.toLowerCase());
+
     const matchesFilter = filterType === "" || event.type === filterType;
+
     return isFavorite || (matchesSearch && matchesFilter);
   });
 
