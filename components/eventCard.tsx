@@ -1,7 +1,8 @@
 "use client";
 
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import { events } from "@/lib/data";
+import { getFavorites, setFavorites } from "@/lib/helpers";
 import {
   BsFillGeoAltFill,
   BsPersonWalking,
@@ -24,22 +25,20 @@ export default function EventCard({
   img,
 }: eventCardProps) {
   const [expanded, setExpanded] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(
-    JSON.parse(localStorage.getItem("favorites") || "[]").includes(name)
-  );
+  const [isFavorite, setIsFavorite] = useState(getFavorites().includes(name));
 
   const toggleFavorite = (event: React.MouseEvent) => {
     event.stopPropagation();
-    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    const favorites = getFavorites();
 
     if (isFavorite) {
       const newFavorites = favorites.filter(
         (favorite: string) => favorite !== name
       );
-      localStorage.setItem("favorites", JSON.stringify(newFavorites));
+      setFavorites(newFavorites);
     } else {
       favorites.push(name);
-      localStorage.setItem("favorites", JSON.stringify(favorites));
+      setFavorites(favorites);
     }
 
     setIsFavorite(!isFavorite);
