@@ -7,6 +7,8 @@ import {
   BsPersonWalking,
   BsPersonVideo3,
   BsMusicNote,
+  BsStar,
+  BsStarFill,
 } from "react-icons/bs";
 import { FaUtensils } from "react-icons/fa";
 
@@ -22,6 +24,26 @@ export default function EventCard({
   img,
 }: eventCardProps) {
   const [expanded, setExpanded] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(
+    JSON.parse(localStorage.getItem("favorites") || "[]").includes(name)
+  );
+
+  const toggleFavorite = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+    if (isFavorite) {
+      const newFavorites = favorites.filter(
+        (favorite: string) => favorite !== name
+      );
+      localStorage.setItem("favorites", JSON.stringify(newFavorites));
+    } else {
+      favorites.push(name);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    }
+
+    setIsFavorite(!isFavorite);
+  };
 
   return (
     <div className="flex" onClick={() => setExpanded(!expanded)}>
@@ -30,7 +52,16 @@ export default function EventCard({
         <p className="text-scottycon-text/50">{endTime}</p>
       </div>
       <div className="flex flex-col items-start basis-4/5 px-2 py-2 border-b border-black/10">
-        <h2 className="font-semibold">{name}</h2>
+        <div className="flex align-top gap-1 w-full">
+          <h2 className="font-semibold">{name}</h2>
+          <button onClick={toggleFavorite} className="ml-auto">
+            {isFavorite ? (
+              <BsStarFill className="text-yellow-500" />
+            ) : (
+              <BsStar />
+            )}
+          </button>
+        </div>
         <p className="text-scottycon-text/50 text-sm flex items-center gap-1">
           <BsFillGeoAltFill className="inline" /> {location}
         </p>

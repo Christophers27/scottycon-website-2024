@@ -15,11 +15,14 @@ export default function TimeSection({
   filterType,
 }: TimeSectionProps) {
   const filteredEvents = timeEvents.filter((event) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    const isFavorite = favorites.includes(event.name);
+
     const matchesSearch =
       event.name.toLowerCase().includes(search.toLowerCase()) ||
       event.description.toLowerCase().includes(search.toLowerCase());
     const matchesFilter = filterType === "" || event.type === filterType;
-    return matchesSearch && matchesFilter;
+    return isFavorite || (matchesSearch && matchesFilter);
   });
 
   if (filteredEvents.length === 0) {
