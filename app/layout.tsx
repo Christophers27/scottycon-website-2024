@@ -8,8 +8,8 @@ import Footer from "@/components/footer";
 const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ScottyCon 2024",
-  description: "Digital Booklet for ScottyCon 2024",
+  title: "ScottyCon 2025",
+  description: "Digital Booklet for ScottyCon 2025",
 };
 
 export default function RootLayout({
