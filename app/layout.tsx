@@ -5,6 +5,7 @@ import Image from "next/image";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import InstallPrompt from "@/components/install";
+import OfflineDisplay from "@/components/offlineDisplay";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -72,6 +73,7 @@ export default function RootLayout({
         />
         <InstallPrompt />
         <Header />
+        <OfflineDisplay />
         {children}
         <Footer />
       </body>

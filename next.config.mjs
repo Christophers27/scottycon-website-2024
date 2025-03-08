@@ -7,6 +7,7 @@ const withSerwist = withSerwistInit({
   cacheOnNavigation: true,
   swSrc: "app/sw.ts",
   swDest: "public/sw.js",
+  reloadOnOnline: true,
 });
 
 export default withSerwist({
