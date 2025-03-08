@@ -6,13 +6,14 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import InstallPrompt from "@/components/install";
 import OfflineDisplay from "@/components/offlineDisplay";
+import { FavoritesProvider } from "@/context/favoritesContext";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
 const APP_NAME = "ScottyCon 2024";
-const APP_DEFAULT_TITLE = "ScottyCon 2024";
-const APP_TITLE_TEMPLATE = "%s | ScottyCon 2024";
-const APP_DESCRIPTION = "Digital Booklet for ScottyCon 2024";
+const APP_DEFAULT_TITLE = "ScottyCon 2025";
+const APP_TITLE_TEMPLATE = "%s | ScottyCon 2025";
+const APP_DESCRIPTION = "Digital Booklet for ScottyCon 2025";
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
@@ -63,19 +64,21 @@ export default function RootLayout({
       <body
         className={`${quicksand.className} bg-scottycon-background min-h-screen flex flex-col`}
       >
-        <Image
-          src="/images/scottyconBackground.png"
-          alt="ScottyCon 2024 Background"
-          fill={true}
-          quality={95}
-          priority={true}
-          className="z-[-999] object-cover" // Set the z-index to extremely low value so it's always in the background
-        />
-        <InstallPrompt />
-        <Header />
-        <OfflineDisplay />
-        {children}
-        <Footer />
+        <FavoritesProvider>
+          <Image
+            src="/scottyconBackground.png"
+            alt="ScottyCon 2025 Background"
+            fill={true}
+            quality={95}
+            priority={true}
+            className="z-[-999] object-cover" // Set the z-index to extremely low value so it's always in the background
+          />
+          <InstallPrompt />
+          <Header />
+          <OfflineDisplay />
+          {children}
+          <Footer />
+        </FavoritesProvider>
       </body>
     </html>
   );
