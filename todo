@@ -1,4 +1,8 @@
 add offline support
-subscribe to push notifications automatically
 set up easy-to-use push notification stuff
-subscribe users into database
+send notifications from server to all clients
+have clients choose which notifications to display
+go to the info about particular event on notification push
+make admin page for sending notifications
+update icon for notifications and app
+add checkin qr code to app

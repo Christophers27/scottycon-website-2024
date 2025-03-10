@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import InstallPrompt from "@/components/install";
 import OfflineDisplay from "@/components/offlineDisplay";
 import { FavoritesProvider } from "@/context/favoritesContext";
+import { NotificationsProvider } from "@/context/notificationContext";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -64,21 +65,23 @@ export default function RootLayout({
       <body
         className={`${quicksand.className} bg-scottycon-background min-h-screen flex flex-col`}
       >
-        <FavoritesProvider>
-          <Image
-            src="/scottyconBackground.png"
-            alt="ScottyCon 2025 Background"
-            fill={true}
-            quality={95}
-            priority={true}
-            className="z-[-999] object-cover" // Set the z-index to extremely low value so it's always in the background
-          />
-          <InstallPrompt />
-          <Header />
-          <OfflineDisplay />
-          {children}
-          <Footer />
-        </FavoritesProvider>
+        <NotificationsProvider>
+          <FavoritesProvider>
+            <Image
+              src="/scottyconBackground.png"
+              alt="ScottyCon 2025 Background"
+              fill={true}
+              quality={95}
+              priority={true}
+              className="z-[-999] object-cover" // Set the z-index to extremely low value so it's always in the background
+            />
+            <InstallPrompt />
+            <Header />
+            <OfflineDisplay />
+            {children}
+            <Footer />
+          </FavoritesProvider>
+        </NotificationsProvider>
       </body>
     </html>
   );
