@@ -1,12 +1,3 @@
-import fifteenkImg from "@/public/15k.png";
-import agapeStardustsImg from "@/public/agape_stardusts.jpg";
-import alexPinkuImg from "@/public/alex_pinku.jpg";
-import katieSheskoImg from "@/public/Katie Shesko.png";
-import kawaiiNekoImg from "@/public/kawaii_neko_productions.png";
-import noodleGalImg from "@/public/n00dl3gal.jpg";
-import rakumarooImg from "@/public/rakumaroo.png";
-import yuiTennyoImg from "@/public/yui_tennyo.png";
-
 export const events = [
   {
     name: "Artist Alley",
@@ -21,7 +12,7 @@ export const events = [
     name: "Arcade Cabinets",
     description: `ScottyCon's selection of rhythm game cabinets, provided by Ikigai Arcade, and organized by the Rhythm Game Club (RGC).
 
-​List of Cabinets:
+List of Cabinets:
   - MaiMai FiNALE
   - Sound Voltex
   - Jubeat
@@ -42,7 +33,7 @@ export const events = [
 
 CMU Esports will be hosting a variety of fighting game tournaments at ScottyCon this year! Sign up at https://start.gg/scottycon24 or in person at the convention. Registration for each event ends 30 minutes before the start time.
 
-1:30 PM - Super Smash Bros. Ultimate Doubles
+1:30 PM - Super Smash Bros. Ultimate Doubles
 2:00 PM - Super Smash Bros. Melee Doubles and Street Fighter 6
 3:00 PM - Super Smash Bros. Ultimate Singles
 4:00 PM - Super Smash Bros. Melee Singles`,
@@ -222,7 +213,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "14:30",
     endTime: "14:35",
     location: "Rangos",
-    img: yuiTennyoImg,
   },
   {
     name: "n00dl3gal (ScottyFest)",
@@ -232,7 +222,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "14:35",
     endTime: "14:40",
     location: "Rangos",
-    img: noodleGalImg,
   },
   {
     name: "Monica Geng, Ruby Shen - loveit (ScottyFest)",
@@ -250,7 +239,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "14:45",
     endTime: "15:15",
     location: "Rangos",
-    img: alexPinkuImg,
   },
   {
     name: "Masquerade",
@@ -269,7 +257,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "18:00",
     endTime: "18:30",
     location: "Rangos",
-    img: fifteenkImg,
   },
   {
     name: "Flute Instrumental Performance",
@@ -279,7 +266,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "18:45",
     endTime: "19:15",
     location: "Rangos",
-    img: katieSheskoImg,
   },
   {
     name: "Random Dance Play",
@@ -325,7 +311,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "13:45",
     endTime: "14:30",
     location: "Dowd",
-    img: kawaiiNekoImg,
   },
   {
     name: "Not Your Momma's Magical Girls",
@@ -335,7 +320,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "14:45",
     endTime: "15:30",
     location: "Dowd",
-    img: kawaiiNekoImg,
   },
   {
     name: "The Magnificent 49ers and the Reinvention of Shoujo Manga",
@@ -381,7 +365,6 @@ Grab a refreshing iced matcha latte! Test your chopstick abilities by seeing how
     startTime: "12:30",
     endTime: "13:30",
     location: "Connan",
-    img: agapeStardustsImg,
   },
   {
     name: "Left on the Shelf - Unadapted Manga",
