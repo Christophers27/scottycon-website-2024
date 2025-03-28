@@ -22,12 +22,10 @@ export default function EventCard({
   startTime,
   endTime,
   location,
-  img,
 }: eventCardProps) {
   const [expanded, setExpanded] = useState(false);
-  const { favorites, toggleFavorite, isInitialized } = useFavorites(); // Get isInitialized
+  const { favorites, toggleFavorite, isInitialized } = useFavorites();
 
-  // Derive isFavorite only after initialization
   const isFavorite = isInitialized && favorites.includes(name);
 
   const handleToggle = (event: React.MouseEvent) => {
@@ -35,18 +33,30 @@ export default function EventCard({
     toggleFavorite(name);
   };
 
+  const [startHH, startMM] = startTime.split("T")[1].split(":");
+  const [endHH, endMM] = endTime.split("T")[1].split(":");
+
+  const [startHours, endHours] = [+startHH, +endHH];
+
+  const startHHMM = `${
+    startHours > 12 ? startHours % 12 : startHours
+  }:${startMM} ${startHours >= 12 ? "PM" : "AM"}`;
+  const endHHMM = `${endHours > 12 ? endHours % 12 : endHours}:${endMM} ${
+    endHours >= 12 ? "PM" : "AM"
+  }`;
+
   return (
     <div className="flex" onClick={() => setExpanded(!expanded)}>
-      <div className="flex flex-col basis-1/5 align-top items-end px-1 py-2">
-        <p className="font-semibold">{startTime}</p>
-        <p className="text-scottycon-text/50">{endTime}</p>
+      <div className="flex flex-col basis-1/4 align-top items-end px-1 py-2">
+        <p className="font-semibold">{startHHMM}</p>
+        <p className="text-black/75">{endHHMM}</p>
       </div>
-      <div className="flex flex-col items-start basis-4/5 px-2 py-2 border-b border-black/10">
+      <div className="flex flex-col items-start basis-3/4 px-2 py-2 border-b border-black/10">
         <div className="flex align-top gap-1 w-full">
           <h2 className="font-semibold">{name}</h2>
           {isInitialized && (
             <button onClick={handleToggle} className="ml-auto">
-              {favorites.includes(name) ? (
+              {isFavorite ? (
                 <BsStarFill className="text-yellow-500" />
               ) : (
                 <BsStar />
@@ -54,10 +64,10 @@ export default function EventCard({
             </button>
           )}
         </div>
-        <p className="text-scottycon-text/50 text-sm flex items-center gap-1">
+        <p className="text-black/75 text-sm flex items-center gap-1">
           <BsFillGeoAltFill className="inline" /> {location}
         </p>
-        <p className="text-scottycon-text/50 text-sm flex items-center gap-1">
+        <p className="text-black/75 text-sm flex items-center gap-1">
           {type === "Activity" && <BsPersonWalking className="inline" />}
           {type === "Food" && <FaUtensils className="inline" />}
           {type === "Panel" && <BsPersonVideo3 className="inline" />}
@@ -66,7 +76,7 @@ export default function EventCard({
         </p>
         {expanded && (
           <div className="flex flex-col items-start pt-1">
-            <p className="text-scottycon-text text-sm">{description}</p>
+            <p className="text-sm">{description}</p>
           </div>
         )}
       </div>

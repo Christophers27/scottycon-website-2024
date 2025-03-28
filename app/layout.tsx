@@ -4,7 +4,6 @@ import "./globals.css";
 import Image from "next/image";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import InstallPrompt from "@/components/install";
 import OfflineDisplay from "@/components/offlineDisplay";
 import { FavoritesProvider } from "@/context/favoritesContext";
 import { NotificationsProvider } from "@/context/notificationContext";
@@ -63,27 +62,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${quicksand.className} bg-scottycon-background min-h-screen flex flex-col`}
-      >
-        <NotificationsProvider>
-          <FavoritesProvider>
+      <body className={`${quicksand.className} antialiased relative min-h-screen`}>
+        <FavoritesProvider>
+          <div className="fixed inset-0 -z-10">
             <Image
-              src="/scottyconBackground.png"
-              alt="ScottyCon 2025 Background"
-              fill={true}
-              quality={95}
-              priority={true}
-              className="z-[-999] object-cover" // Set the z-index to extremely low value so it's always in the background
+              src="/main-visual.png"
+              alt="ScottyCon 2025"
+              fill
+              quality={75}
+              className="object-cover"
             />
-            {/* <InstallPrompt /> */}
-            <Header />
-            <AllowNotifications />
+          </div>
+          <Header />
+          <AllowNotifications />
             <OfflineDisplay />
-            {children}
-            <Footer />
-          </FavoritesProvider>
-        </NotificationsProvider>
+          {children}
+          <Footer />
+        </FavoritesProvider>
       </body>
     </html>
   );
