@@ -35,6 +35,6 @@
     "@serwist/build": "^9.0.10",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
-    "serwist": "^9.0.10",
+    "serwist": "^9.0.10"
   }
 }

@@ -62,23 +62,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} antialiased relative min-h-screen`}>
-        <FavoritesProvider>
-          <div className="fixed inset-0 -z-10">
-            <Image
-              src="/main-visual.png"
-              alt="ScottyCon 2025"
-              fill
-              quality={75}
-              className="object-cover"
-            />
-          </div>
-          <Header />
-          <AllowNotifications />
+      <body
+        className={`${quicksand.className} antialiased relative min-h-screen`}
+      >
+        <NotificationsProvider>
+          <FavoritesProvider>
+            <div className="fixed inset-0 -z-10">
+              <Image
+                src="/main-visual.png"
+                alt="ScottyCon 2025"
+                fill
+                quality={75}
+                className="object-cover"
+              />
+            </div>
+            <Header />
+            <AllowNotifications />
             <OfflineDisplay />
-          {children}
-          <Footer />
-        </FavoritesProvider>
+            {children}
+            <Footer />
+          </FavoritesProvider>
+        </NotificationsProvider>
       </body>
     </html>
   );
