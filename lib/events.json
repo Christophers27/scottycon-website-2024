@@ -136,74 +136,10 @@
     "location": "216 Pake Room"
   },
   {
-    "name": "ScottyFest: Newly Edgy Idols - More More Jump",
-    "description": "Come join us for this cover of Newly Edgy Idols from the popular rhythm game HATSUNE MIKU: COLORFUL STAGE!",
+    "name": "ScottyFest",
+    "description": "Come see a variety of talented performers on the main stage! Featuring: Lydia Yang, Zhuowen Huang, Sonya Simkin, Mio Chen, Miffy, Mara Barron, FRESA, Lisa, Lydia Yang, PopCultureChoreography, Star Wars Club, Why did we play Haruhikage?",
     "type": "Performance",
     "startTime": "2025-03-29T12:00:00",
-    "endTime": "2025-03-29T12:02:00",
-    "location": "223 Rangos Stage"
-  },
-  {
-    "name": "ScottyFest: Creamsoda and Chandelier",
-    "description": "“Cream, Soda, and Chandelier” is a sweet and cute song that captures the feelings of first love. Paired with vibrant dance moves, it's sure to light up your day.",
-    "type": "Performance",
-    "startTime": "2025-03-29T12:02:00",
-    "endTime": "2025-03-29T12:06:00",
-    "location": "223 Rangos Stage"
-  },
-  {
-    "name": "ScottyFest: Hot Mess - Aespa",
-    "description": "Hot Mess is Korean girl group Aespa's best Japanese release to date! It will be cute and spunky.",
-    "type": "Performance",
-    "startTime": "2025-03-29T12:06:00",
-    "endTime": "2025-03-29T12:10:00",
-    "location": "223 Rangos Stage"
-  },
-  {
-    "name": "ScottyFest: Deja Vu - ATEEZ",
-    "description": "FRESA at Pitt is a club that celebrates Asian pop music through dance. We encourage you to check out our covers on YouTube and follow us on Instagram! If you do so after this performance, you just might get deja vu ~ This dance is performed by Sophia Yi, Caroline Vo, Angela Qiu, Grace Chen, Dev Chopra, Hayes Chong, Julianne Kruse, and Kate Friedemann.",
-    "type": "Performance",
-    "startTime": "2025-03-29T12:10:00",
-    "endTime": "2025-03-29T12:15:00",
-    "location": "223 Rangos Stage"
-  },
-  {
-    "name": "ScottyFest: Lumpy Space Princess: One Woman Show",
-    "description": "Join Lumpy Space Princess as she runs away from home. LSP navigates living among a pack of wolves, accusations of being a monster, and saves the village!",
-    "type": "Performance",
-    "startTime": "2025-03-29T12:15:00",
-    "endTime": "2025-03-29T12:25:00",
-    "location": "223 Rangos Stage"
-  },
-  {
-    "name": "ScottyFest: More! Jump! More! - More More Jump",
-    "description": "Come watch this high energy dance cover of More More Jump's commissioned single from the rhythm game HATSUNE MIKU: COLORFUL STAGE! with choreography by Wata!",
-    "type": "Performance",
-    "startTime": "2025-03-29T12:25:00",
-    "endTime": "2025-03-29T12:30:00",
-    "location": "223 Rangos Stage"
-  },
-  {
-    "name": "ScottyFest: Fandom Dance Showcase",
-    "description": "Join PopCultureChoreography for a tap, jazz, and ballet dance showcase featuring songs from anime, gaming, and pop culture!",
-    "type": "Performance",
-    "startTime": "2025-03-29T12:30:00",
-    "endTime": "2025-03-29T12:40:00",
-    "location": "223 Rangos Stage"
-  },
-  {
-    "name": "ScottyFest: The Force Awakens at CMU",
-    "description": "Witness the prowess of CMU Star Wars Club with their masterful spins and breath-taking lightsaber choreography.",
-    "type": "Performance",
-    "startTime": "2025-03-29T12:40:00",
-    "endTime": "2025-03-29T12:45:00",
-    "location": "223 Rangos Stage"
-  },
-  {
-    "name": "ScottyFest: Haruhikage (and more :|| ) ?",
-    "description": "I never thought being in this band was fun, never even once.",
-    "type": "Performance",
-    "startTime": "2025-03-29T12:45:00",
     "endTime": "2025-03-29T13:00:00",
     "location": "223 Rangos Stage"
   },
