@@ -17,8 +17,12 @@ export default function Footer() {
   return (
     <footer className="flex p-2 items-center justify-evenly sticky bottom-0 bg-white">
       {linkButton("/", <BiSolidHome className="text-2xl" />, "Home")}
-      {linkButton("/events", <BiSolidCalendarEvent className="text-2xl" />, "Events")}
-      {linkButton("/map", <BiSolidCalendarEvent className="text-2xl" />, "Map")}
+      {linkButton(
+        "/events",
+        <BiSolidCalendarEvent className="text-2xl" />,
+        "Events"
+      )}
+      {/* {linkButton("/map", <BiSolidCalendarEvent className="text-2xl" />, "Map")} */}
     </footer>
   );
 }

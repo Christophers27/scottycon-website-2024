@@ -4,8 +4,8 @@ import EventCard from "@/components/eventCard";
 export default function Home() {
   const upcomingEvents = events.filter(
     (event) =>
-      Date.now() < Date.parse(`2025-03-29T${event.endTime}:00`) &&
-      Date.parse(`2025-03-29T${event.startTime}:00`) < Date.now() + 3600000
+      Date.now() < Date.parse(event.endTime) &&
+      Date.parse(event.startTime) < Date.now() + 3600000
   );
 
   return (

@@ -11,8 +11,9 @@ export default function EventsPage() {
 
   const groupByTime = events.reduce(
     (groups: Record<string, typeof events>, event) => {
-      const mm = event.startTime.split(":")[1] < "30" ? "00" : "30";
-      const key = `${event.startTime.split(":")[0]}:${mm}`;
+      const [hh, mm] = event.startTime.split("T")[1].split(":"); // Extract hours and minutes from startTime
+
+      const key = `${hh}:${mm}`;
       if (!groups[key]) {
         groups[key] = [];
       }
@@ -33,14 +34,9 @@ export default function EventsPage() {
             onChange={(e) => setSearch(e.target.value)}
             className="border-b-2 border-black/10 mb-4 w-full"
           />
-          <div className="flex flex-row justify-evenly gap-4 mb-4">
+          <div className="flex flex-row gap-4 mb-4">
             <FilterTypeButton
               type="Activity"
-              filterType={filterType}
-              setFilterType={setFilterType}
-            />
-            <FilterTypeButton
-              type="Food"
               filterType={filterType}
               setFilterType={setFilterType}
             />
