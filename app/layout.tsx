@@ -8,6 +8,7 @@ import InstallPrompt from "@/components/install";
 import OfflineDisplay from "@/components/offlineDisplay";
 import { FavoritesProvider } from "@/context/favoritesContext";
 import { NotificationsProvider } from "@/context/notificationContext";
+import AllowNotifications from "@/components/allowNotifications";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -75,8 +76,9 @@ export default function RootLayout({
               priority={true}
               className="z-[-999] object-cover" // Set the z-index to extremely low value so it's always in the background
             />
-            <InstallPrompt />
+            {/* <InstallPrompt /> */}
             <Header />
+            <AllowNotifications />
             <OfflineDisplay />
             {children}
             <Footer />

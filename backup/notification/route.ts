@@ -1,5 +1,18 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { notifyAll } from "./notifyAll";
 import webPush from "web-push";
+import { neon } from "@neondatabase/serverless";
+if (!process.env.DATABASE_URL) {
+  throw new Error("Environment variables supplied not sufficient.");
+}
+const sql = neon(process.env.DATABASE_URL);
+
+export const GET = async (req: NextRequest) => {
+  let data = await sql`SELECT * FROM Notifications ORDER BY timeSent DESC`;
+  return new NextResponse(JSON.stringify({ data: data }), {
+    status: 200,
+  });
+};
 
 export const POST = async (req: NextRequest) => {
   if (
@@ -15,7 +28,8 @@ export const POST = async (req: NextRequest) => {
       notificationTitle: string | undefined;
       notificationMessage: string | undefined;
     };
-  try {
+  return await notifyAll(notificationTitle, notificationMessage);
+  /*try {
     webPush.setVapidDetails(
       `mailto:${process.env.WEB_PUSH_EMAIL}`,
       process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
@@ -43,5 +57,5 @@ export const POST = async (req: NextRequest) => {
     return new NextResponse("Internal Server Error", {
       status: 500,
     });
-  }
+  }*/
 };

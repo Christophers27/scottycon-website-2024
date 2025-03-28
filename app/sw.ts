@@ -19,6 +19,9 @@ const serwist = new Serwist({
   clientsClaim: true,
   navigationPreload: true,
   runtimeCaching: defaultCache,
+  precacheOptions: {
+    cleanupOutdatedCaches: true,
+  },
   //   fallbacks: {
   //     entries: [
   //       {
@@ -36,9 +39,11 @@ self.addEventListener("push", (event) => {
   event.waitUntil(
     self.registration.showNotification(data.title, {
       body: data.message,
-      icon: "/icons/android-chrome-192x192.png",
+      icon: "/icons/android/android-launchericon-192-192.png",
     })
   );
+  // postMessage("NEW_NOTIFICATION");
+  //
 });
 
 self.addEventListener("notificationclick", (event) => {
@@ -58,6 +63,28 @@ self.addEventListener("notificationclick", (event) => {
         }
         return self.clients.openWindow("/");
       })
+  );
+});
+
+const urlsToCache = [
+  "/",
+  "events",
+  "map",
+  "notifications",
+  "/~offline",
+] as const;
+
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    Promise.all(
+      urlsToCache.map((entry) => {
+        const request = serwist.handleRequest({
+          request: new Request(entry),
+          event,
+        });
+        return request;
+      })
+    )
   );
 });
 

@@ -4,6 +4,7 @@ import {
   BiSolidHome,
   BiSolidCalendarEvent,
   BiSolidMapAlt,
+  BiSolidBell,
 } from "react-icons/bi";
 
 export default function Footer() {
@@ -23,6 +24,13 @@ export default function Footer() {
       <Link className="flex flex-col items-center justify-center" href="/map">
         <BiSolidMapAlt className="size-6" />
         <p className="text-xs">Map</p>
+      </Link>
+      <Link
+        className="flex flex-col items-center justify-center"
+        href="/notifications"
+      >
+        <BiSolidBell className="size-6" />
+        <p className="text-xs">Alerts</p>
       </Link>
     </div>
   );
