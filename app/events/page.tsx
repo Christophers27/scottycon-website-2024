@@ -13,7 +13,9 @@ export default function EventsPage() {
     (groups: Record<string, typeof events>, event) => {
       const [hh, mm] = event.startTime.split("T")[1].split(":"); // Extract hours and minutes from startTime
 
-      const key = `${hh}:${mm}`;
+      const key = `${+hh > 12 ? +hh % 12 : hh}:${+mm < 30 ? "00" : "30"} ${
+        +hh >= 12 ? "PM" : "AM"
+      }`;
       if (!groups[key]) {
         groups[key] = [];
       }
@@ -26,7 +28,7 @@ export default function EventsPage() {
   return (
     <main className="page">
       <section className="section flex flex-col h-[80dvh]">
-        <div className="flex-none"> 
+        <div className="flex-none">
           <h1 className="section-title">Events</h1>
           <input
             type="text"
@@ -95,51 +97,52 @@ function FilterTypeButton({
 }
 
 interface TimeSectionProps {
-    time: string;
-    timeEvents: typeof events;
-    search: string;
-    filterType: string;
-  }
-  
+  time: string;
+  timeEvents: typeof events;
+  search: string;
+  filterType: string;
+}
+
 function TimeSection({
-    time,
-    timeEvents,
-    search,
-    filterType,
-  }: TimeSectionProps) {
-    const { favorites } = useFavorites();
-  
-    const filteredEvents = timeEvents.filter((event) => {
-      const isFavorite = favorites.includes(event.name);
-  
-      const matchesSearch =
-        event.name.toLowerCase().includes(search.toLowerCase()) ||
-        event.description.toLowerCase().includes(search.toLowerCase());
-  
-      const matchesFilter = filterType === "all" || event.type === filterType;
-  
-      return isFavorite || (matchesSearch && matchesFilter);
-    });
-  
-    if (filteredEvents.length === 0) {
-      return null;
-    }
-  
-    return (
-      <div className="flex flex-col">
-        <div className="flex bg-scottycon-blue border-2 border-black/10 rounded-full">
-          <h2 className="basis-1/5 flex flex-col items-end font-semibold text-xl px-1">
-            {time}
-          </h2>
-          <div className="flex basis-4/5 h-full" />
-        </div>
-        <div className="flex flex-col flex-1 w-full">
-          {filteredEvents
-            .sort((a, b) => a.endTime.localeCompare(b.endTime))
-            .map((event) => (
-              <EventCard key={event.name} {...event} />
-            ))}
-        </div>
-      </div>
-    );
+  time,
+  timeEvents,
+  search,
+  filterType,
+}: TimeSectionProps) {
+  const { favorites } = useFavorites();
+
+  const filteredEvents = timeEvents.filter((event) => {
+    const isFavorite = favorites.includes(event.name);
+
+    const matchesSearch =
+      event.name.toLowerCase().includes(search.toLowerCase()) ||
+      event.description.toLowerCase().includes(search.toLowerCase());
+
+    const matchesFilter = filterType === "all" || event.type === filterType;
+
+    return isFavorite || (matchesSearch && matchesFilter);
+  });
+
+  if (filteredEvents.length === 0) {
+    return null;
   }
+
+  return (
+    <div className="flex flex-col">
+      <div className="flex bg-scottycon-blue border-2 border-black/10 rounded-full">
+        <h2 className="basis-1/4 flex flex-col items-end font-bold px-1">
+          {time}
+        </h2>
+        <div className="flex basis-3/4 h-full" />
+      </div>
+      <div className="flex flex-col flex-1 w-full">
+        {filteredEvents
+          .sort((a, b) => a.endTime.localeCompare(b.endTime))
+          .sort((a, b) => a.startTime.localeCompare(b.startTime))
+          .map((event) => (
+            <EventCard key={event.name} {...event} />
+          ))}
+      </div>
+    </div>
+  );
+}

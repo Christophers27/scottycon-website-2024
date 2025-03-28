@@ -33,19 +33,25 @@ export default function EventCard({
     toggleFavorite(name);
   };
 
-  // Format startTime and endTime to be more readable
-  const [startHH, startMM] = startTime.split("T")[1].split(":"); // Extract hours and minutes from startTime
-  const [endHH, endMM] = endTime.split("T")[1].split(":"); // Extract hours and minutes from endTime
-  const startHHMM = `${startHH}:${startMM}`; // Format start time as HH:MM
-  const endHHMM = `${endHH}:${endMM}`; // Format end time as HH:MM
+  const [startHH, startMM] = startTime.split("T")[1].split(":");
+  const [endHH, endMM] = endTime.split("T")[1].split(":");
+
+  const [startHours, endHours] = [+startHH, +endHH];
+
+  const startHHMM = `${
+    startHours > 12 ? startHours % 12 : startHours
+  }:${startMM} ${startHours >= 12 ? "PM" : "AM"}`;
+  const endHHMM = `${endHours > 12 ? endHours % 12 : endHours}:${endMM} ${
+    endHours >= 12 ? "PM" : "AM"
+  }`;
 
   return (
     <div className="flex" onClick={() => setExpanded(!expanded)}>
-      <div className="flex flex-col basis-1/5 align-top items-end px-1 py-2">
+      <div className="flex flex-col basis-1/4 align-top items-end px-1 py-2">
         <p className="font-semibold">{startHHMM}</p>
         <p className="text-black/75">{endHHMM}</p>
       </div>
-      <div className="flex flex-col items-start basis-4/5 px-2 py-2 border-b border-black/10">
+      <div className="flex flex-col items-start basis-3/4 px-2 py-2 border-b border-black/10">
         <div className="flex align-top gap-1 w-full">
           <h2 className="font-semibold">{name}</h2>
           {isInitialized && (
