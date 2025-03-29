@@ -1,9 +1,5 @@
 import Link from "next/link";
-import {
-  BiSolidHome,
-  BiSolidCalendarEvent,
-  BiSolidBell,
-} from "react-icons/bi";
+import { BiSolidHome, BiSolidCalendarEvent, BiSolidBell } from "react-icons/bi";
 import React, { JSX } from "react";
 
 export default function Footer() {
