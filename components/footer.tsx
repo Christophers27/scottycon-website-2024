@@ -22,7 +22,7 @@ export default function Footer() {
         <BiSolidCalendarEvent className="text-2xl" />,
         "Events"
       )}
-      {/* {linkButton("/map", <BiSolidCalendarEvent className="text-2xl" />, "Map")} */}
+      {linkButton("/map", <BiSolidCalendarEvent className="text-2xl" />, "Map")}
     </footer>
   );
 }

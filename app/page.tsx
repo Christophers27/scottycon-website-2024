@@ -34,18 +34,20 @@ export default function Home() {
         </div>
       </section>
       <section className="section">
-        <h1 className="section-title">Lost & Found</h1>
-        <p>
-          If you have lost something, the lost and found is located at the UC
-          Info Desk on the first floor. If you have found something, please
-          bring it there.
+        <h1 className="section-title">Notices</h1>
+        <p className="mb-2">
+          <strong>Wi-Fi:</strong> ScottyCon 2025 has free Wi-Fi! Connect to
+          CMU-GUEST with your email and QALM3BA5 as the password.
         </p>
-      </section>
-      <section className="section">
-        <h1 className="section-title">Wi-Fi</h1>
-        <p>
-          ScottyCon 2025 has free Wi-Fi! Connect to CMU-GUEST with your email
-          and QALM3BA5 as the password.
+        <p className="mb-2">
+          <strong>Trading:</strong> Some of our vendors offer game, console, or
+          card trade-ins. If you are interested, please be sure to bring your
+          items to our event!
+        </p>
+        <p className="mb-2">
+          <strong>Lost & Found:</strong> If you have lost something, the lost
+          and found is located at the UC Info Desk on the first floor. If you
+          have found something, please bring it there.
         </p>
       </section>
     </main>
