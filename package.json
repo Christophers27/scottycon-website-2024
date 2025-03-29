@@ -6,13 +6,21 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vapid": "node ./generate-vapid-keys.js"
   },
   "dependencies": {
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "@neondatabase/serverless": "^0.10.4",
+    "@serwist/next": "^9.0.10",
+    "@types/prompts": "^2.4.9",
+    "@types/web-push": "^3.6.4",
+    "prompts": "^2.4.2",
+    "sharp": "^0.33.5",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -23,6 +31,10 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@serwist/build": "^9.0.10",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "serwist": "^9.0.10"
   }
 }

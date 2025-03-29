@@ -1,0 +1,7 @@
+:3003 {
+	respond "hi there"
+}
+
+10.0.0.227:3001 {
+	reverse_proxy localhost:3000
+}

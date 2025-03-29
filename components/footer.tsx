@@ -1,6 +1,10 @@
 import Link from "next/link";
+import {
+  BiSolidHome,
+  BiSolidCalendarEvent,
+  BiSolidBell,
+} from "react-icons/bi";
 import React, { JSX } from "react";
-import { BiSolidCalendarEvent, BiSolidHome } from "react-icons/bi";
 
 export default function Footer() {
   function linkButton(link: string, icon: JSX.Element, text: string) {

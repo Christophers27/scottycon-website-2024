@@ -1,0 +1,14 @@
+## now
+
+make subscribing try again on fail
+display time on notification page to pittsburgh time
+add unregister for notifications
+update icon for notifications
+
+## later
+
+add offline support
+have clients choose which notifications to display
+go to the info about particular event on notification push
+make admin page for sending notifications
+add checkin qr code to app
