@@ -163,16 +163,24 @@
     "name": "Masquerade",
     "description": "Join us for our annual Masquerade! Watch as cosplayers from all over show off their hard work and craftsmanship on stage, in an walk-on á la fashion show style. Cheer on your favorites!",
     "type": "Performance",
-    "startTime": "2025-03-29T15:30:00",
-    "endTime": "2025-03-29T16:30:00",
+    "startTime": "2025-03-29T16:15:00",
+    "endTime": "2025-03-29T17:15:00",
+    "location": "223 Rangos Stage"
+  },
+  {
+    "name": "Anime Trivia",
+    "description": "Test your anime knowledge in our anime trivia Kahoot! Win prizes!",
+    "type": "Activity",
+    "startTime": " 2025-03-29T17:15:00",
+    "endTime": "2025-03-29T17:30:00",
     "location": "223 Rangos Stage"
   },
   {
     "name": "CMU Jazz Club Performance",
     "description": "Our mission is to create an environment and provide musicians with the means to explore and develop their interests in the American art form of jazz. We also aim to share our music with the CMU community, providing live entertainment, a relaxing setting, stress relief, and a community of people to spend time with.",
     "type": "Performance",
-    "startTime": "2025-03-29T17:15:00",
-    "endTime": "2025-03-29T18:00:00",
+    "startTime": "2025-03-29T17:30:00",
+    "endTime": "2025-03-29T18:15:00",
     "location": "223 Rangos Stage"
   },
   {
