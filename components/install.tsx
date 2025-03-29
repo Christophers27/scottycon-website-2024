@@ -9,7 +9,9 @@ import { useEffect, useState } from "react";
 async function SetWakeLock() {
   try {
     await navigator.wakeLock.request();
-  } catch (_err) {}
+  } catch (_err) {
+    console.error("Wake Lock failed:", _err);
+  }
 }
 
 export default function InstallPrompt() {
@@ -18,6 +20,7 @@ export default function InstallPrompt() {
 
   useEffect(() => {
     setIsIOS(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream
     );
 

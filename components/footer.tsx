@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   BiSolidHome,
   BiSolidCalendarEvent,
-  BiSolidMapAlt,
   BiSolidBell,
 } from "react-icons/bi";
 import React, { JSX } from "react";
@@ -28,7 +27,11 @@ export default function Footer() {
         "Events"
       )}
       {/* {linkButton("/map", <BiSolidCalendarEvent className="text-2xl" />, "Map")} */}
-      {linkButton("/notifications", <BiSolidBell className="text-2xl" />, "Alerts")}
+      {linkButton(
+        "/notifications",
+        <BiSolidBell className="text-2xl" />,
+        "Alerts"
+      )}
     </footer>
   );
 }
