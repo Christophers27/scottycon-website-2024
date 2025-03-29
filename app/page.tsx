@@ -37,7 +37,7 @@ export default function Home() {
         <h1 className="section-title">Notices</h1>
         <p className="mb-2">
           <strong>Wi-Fi:</strong> ScottyCon 2025 has free Wi-Fi! Connect to
-          CMU-GUEST with your email and QALM3BA5 as the password.
+          CMU-GUEST with your email and D46BQ8AG as the password.
         </p>
         <p className="mb-2">
           <strong>Trading:</strong> Some of our vendors offer game, console, or
