@@ -70,7 +70,6 @@ const urlsToCache = [
   "/",
   "events",
   "map",
-  "notifications",
   "/~offline",
 ] as const;
 
