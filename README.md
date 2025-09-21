@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ScottyCon Digital Booklet - Webapp
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This repository is for the ScottyCon Digital Booklet, meant for the con-goers to use. Ignore the 2024 thing, we will be working with this repo for all future cons. This is a webapp, built with React Next.js, and is hosted on Vercel. It is a progressive web app (PWA), meaning it can be installed on your phone or computer like a native app. 
+
+## Development
+
+To run the app locally, you will need to have Node.js and npm installed. I recommend using node version manager (nvm) to manage your Node.js versions. Once you have Node.js and npm installed, you can clone the repository and install the dependencies with:
+
+```bash
+npm install
+```
+
+Once the dependencies are installed, you will need to set up your environment variables. Create a `.env` file in the root of the project and add the following variables:
+
+```env
+DATABASE_URL=<ask Chris for this>
+```
+
+Do not ever place these variables directly in the code, as this is a public repository. Once you have your environment variables set up, you can run the app locally with:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the app on `http://localhost:3000`. You can then open this URL in your browser to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project is structured as follows:
+- `app/`: Contains the code for the various pages of the webapp. We use the Next.js App Router, which makes each folder within `app/` a sub-page within the webapp.
+- `components/`: Contains the reusable React components used throughout the app.
+- `public/`: Contains static assets such as images and fonts.
+- `context/`: Contains the React context providers that allow for global state management across the app.
+- `hooks/`: Contains custom React hooks used throughout the app.
+- `lib/`: Contains static information for use in the app, such as the list of events.
+- `backup/`: Contains scripts for sending out alerts.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The app is deployed on Vercel, meaning that any changes pushed to the `main` branch will automatically be deployed to the live site. Therefore, do not push directly to the `main` branch. Instead, create a new branch for your changes and open a pull request. Once the pull request is approved, it can be merged into `main`, triggering a deployment. Branches are also deployed to Vercel but do not use the main link.
