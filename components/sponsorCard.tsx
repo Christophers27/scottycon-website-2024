@@ -3,7 +3,7 @@
 import React from "react";
 
 const tierStyles: Record<string, string> = {
-  gold: "border-yellow-400 bg-yellow-100/40 hover:shadow-yellow-300 animate-pulse",
+  gold: "border-yellow-400 bg-yellow-100/40 hover:shadow-yellow-300",
   silver: "border-gray-400 bg-gray-100/40 hover:shadow-gray-300",
   bronze: "border-amber-600 bg-amber-100/40 hover:shadow-amber-300",
 };
@@ -24,36 +24,60 @@ export default function SponsorCard({
   index: number;
 }) {
 
-  function slideOpen() {
-    return (
-      <p className="text-sm text-gray-700 line-clamp-4">
-        {description}
-      </p>
-    );
+  const [isOpen, setIsOpen] = React.useState(false);
+  
+  function flip() {
+    setIsOpen(!isOpen);
   }
 
   return (
-    <a
+    <a 
       key={name}
+      type="button"
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        flex flex-col items-center gap-4 text-left 
-        bg-white/40 backdrop-blur-md rounded-2xl p-4 
-        border transition transform hover:scale-105 hover:shadow-lg 
-        ${tierStyles[tier]} 
+        items-center gap-4 cursor-pointer h-30 flex rounded-2xl
+        transition transform hover:scale-105 perspective-midrange
         animate-fadeIn delay-[${index * 100}ms]
       `}
-      onClick={slideOpen}
-    >
-      <img
-        src={logo}
-        alt={`${name} logo`}
-        className="w-16 h-16 object-contain flex-shrink-0 rounded-md"
-      />
-      <h3 className="text-lg font-semibold mb-1">
-        {name}
-      </h3>
+      onClick={() => flip()}
+      >
+      <div
+        className={`
+          relative size-full transition duration-1000 transition-all
+          transform-3d hover:shadow-lg rounded-2xl
+          ${isOpen ? 'rotate-y-180' : 'rotate-y-0'}
+        `}
+        style={{ transform: isOpen ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
+        aria-label={`Sponsor card for ${name}. Click to ${isOpen ? 'show front' : 'show back'}.`}
+      >
+        <div className="absolute inset-0 size-full rounded-2xl backface-hidden rotate-x-0">
+          <div className={`
+            flex flex-col size-full items-center bg-white/40 rounded-2xl p-4
+            border justify-center ${tierStyles[tier]}
+          `}>
+            <img
+              src={logo}
+              alt={`${name} logo`}
+              className="w-16 h-16 object-contain flex-shrink-0 rounded-md"
+            />
+            <h3 className="text-lg font-semibold mb-1">
+              {name}
+            </h3>
+          </div>
+        </div>
+        <div className="absolute inset-0 size-full rounded-2xl backface-hidden rotate-x-0 rotate-y-180">
+          <div className={`
+            flex flex-col size-full items-center bg-white/40 rounded-2xl p-4
+            border justify-center ${tierStyles[tier]}
+          `}>
+            <p className="text-left text-sm text-gray-700 line-clamp-4">
+              {description}
+            </p>
+          </div>
+        </div>
+      </div>
     </a>
     );
 }

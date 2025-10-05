@@ -86,7 +86,7 @@ export default function SponsorsPage() {
             <h2 className="text-xl font-bold mb-4 text-center">
               {tierTitles[tier]} {/* Notice how this typescript expression is equal to a string, which you can directly use in this HTML area */}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit, minmax(200px, 1fr))] gap-6">
               {tierSponsors.map((sponsor, i) => (
                 <SponsorCard key={sponsor.name} {...sponsor} index={i} />
               ))}
