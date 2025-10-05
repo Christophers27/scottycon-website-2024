@@ -4,7 +4,7 @@ import duck1 from "./assets/rubberDuckDreams_orange.jpeg";
 import duck2 from "./assets/rubberDuckDreams_blue.png";
 import notduck from "./assets/AngstyAhh.png";
 
-export default function MapPage() {
+export default function Sponsors() {
   const imageData = [
     {
       id: 1,
