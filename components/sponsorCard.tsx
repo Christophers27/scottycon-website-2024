@@ -37,7 +37,7 @@ export default function SponsorCard({
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        items-center gap-4 cursor-pointer h-30 flex rounded-2xl
+        items-center gap-4 cursor-pointer h-48 flex rounded-2xl
         transition transform hover:scale-105 perspective-midrange
         animate-fadeIn delay-[${index * 100}ms]
       `}
@@ -60,7 +60,7 @@ export default function SponsorCard({
             <img
               src={logo}
               alt={`${name} logo`}
-              className="w-16 h-16 object-contain flex-shrink-0 rounded-md"
+              className="size-40 object-contain flex-shrink-0 rounded-md"
             />
             <h3 className="text-lg font-semibold mb-1">
               {name}
