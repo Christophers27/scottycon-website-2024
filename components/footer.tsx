@@ -28,6 +28,7 @@ export default function Footer() {
         <BiSolidBell className="text-2xl" />,
         "Alerts"
       )}
+      {linkButton("/artistAlley", <BiSolidCalendarEvent className="text-2xl" />, "Artist Alley")}
     </footer>
   );
 }
