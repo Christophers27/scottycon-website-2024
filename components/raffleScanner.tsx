@@ -68,9 +68,9 @@ export default function RaffleScanner() {
         <div className="grid grid-cols-2 w-full my-1 gap-4">
           {stamps.map((stamp) => (
             <div key={stamp.stamp_id} className="text-center">
-              <h2>Stamp {stamp.stamp_id}</h2>
-              <span className="text-sm">Obtained at: {stamp.obtained ? stamp.obtained_at.toLocaleString() : "Not yet obtained"}</span>
-              <img src={stamp.obtained ? "/stamp_ph.png" : "/temp.png"} className="rounded-full object-cover" />
+              <h2 className="font-bold">Stamp {stamp.stamp_id}</h2>
+              <p className="text-sm pb-4">Obtained at: {stamp.obtained ? stamp.obtained_at.toLocaleString() : "Not yet obtained"}</p>
+              <img src={stamp.obtained ? "/stamp_ph.png" : "/temp.png"} className="w-3/4 mx-auto rounded-full object-cover border bg-white border-black/10" />
             </div>
           ))}
         </div>
