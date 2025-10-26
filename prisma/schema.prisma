@@ -13,13 +13,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model orders {
-  order_id          String @id
-  shippingfirstname String
-  shippinglastname  String
-  shippingemail     String
-  shippingphone     String
-  productoptions    String
-  productquantity   Int
-  checkedin         Int    @default(0)
+model stamp {
+  stamp_id    Int      @id @default(autoincrement())
+  stamp_type  Int
+  obtained    Boolean  @default(false)
+  obtained_at DateTime @default(now())
 }
