@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BiSolidHome, BiSolidCalendarEvent, BiSolidBell } from "react-icons/bi";
+import { BiSolidHome, BiSolidCalendarEvent, BiSolidBell, BiCool} from "react-icons/bi";
 import React, { JSX } from "react";
 
 export default function Footer() {
@@ -28,6 +28,7 @@ export default function Footer() {
         <BiSolidBell className="text-2xl" />,
         "Alerts"
       )}
+      {linkButton("/interestboard", <BiCool className="text-2xl" />, "Interest Board")}
     </footer>
   );
 }
