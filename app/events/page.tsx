@@ -27,6 +27,11 @@ export default function EventsPage() {
 
   return (
     <main className="page">
+      <div className="section flex items-center">
+        <a href="/tempCalendar.ics" download="tempCalendar.ics">
+          download
+        </a>
+      </div>
       <section className="section flex flex-col h-[80dvh]">
         <div className="flex-none">
           <h1 className="section-title">Events</h1>
