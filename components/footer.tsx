@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BiSolidHome, BiSolidCalendarEvent, BiSolidBell, BiSolidBadge } from "react-icons/bi";
+import { BiSolidHome, BiSolidCalendarEvent, BiSolidBell, BiSolidBadge, BiSolidDonateHeart} from "react-icons/bi";
 import React, { JSX } from "react";
 
 export default function Footer() {
@@ -40,6 +40,11 @@ export default function Footer() {
         "/sponsors",
         <BiSolidBadge className="text-2xl " />,
         "Sponsors"
+      )}
+      {linkButton(
+        "/affiliates",
+        <BiSolidDonateHeart className="text-2xl" />,
+        "Affiliates"
       )}
     </footer>
   );
