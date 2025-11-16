@@ -45,7 +45,7 @@ export default function Affiliates() {
         <p className="text-center">
           We thank our affiliates and guest stars for dedicating their time and 
           talent to making ScottyCon as enjoyable and memorable as possible! We 
-          couldn't have done it without you!
+          couldn&apos;t have done it without you!
         </p>
         <br></br>
         <section className="flex flex-wrap justify-center gap-12">
