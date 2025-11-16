@@ -11,7 +11,6 @@ const tierStyles: Record<string, string> = {
 export default function SponsorCard({
   name,
   logo,
-  website,
   description,
   tier,
   index,
@@ -45,7 +44,7 @@ export default function SponsorCard({
       >
       <div
         className={`
-          relative size-full transition duration-1000 transition-all
+          relative size-full duration-1000 transition-all
           transform-3d hover:shadow-lg rounded-2xl
           ${isOpen ? 'rotate-y-180' : 'rotate-y-0'}
         `}

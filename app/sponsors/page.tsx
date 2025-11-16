@@ -69,7 +69,7 @@ export default function SponsorsPage() {
       <section className="section mb-8 text-center animate-fadeIn"> 
         <h1 className="section-title">Thank You to Our Sponsors</h1>
         <p className="text-gray-700">
-          Our event wouldn't be possible without the generous support of our
+          Our event wouldn&apos;t be possible without the generous support of our
           sponsors. Their contributions help us bring the community together and
           create an amazing experience for everyone. 💖
         </p>
