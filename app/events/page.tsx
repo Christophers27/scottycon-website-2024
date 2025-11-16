@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import { events } from "@/lib/data";
 import EventCard from "@/components/eventCard";
 import { useFavorites } from "@/context/favoritesContext";
+import CalendarView from "@/components/CalendarView";
 
 export default function EventsPage() {
   const [search, setSearch] = useState("");
   const [filterType, setFilterType] = useState("all");
+  const [viewMode, setViewMode] = useState<"list" | "calendar">("list");
 
   const groupByTime = events.reduce(
     (groups: Record<string, typeof events>, event) => {
@@ -27,47 +29,100 @@ export default function EventsPage() {
 
   return (
     <main className="page">
-      <section className="section flex flex-col h-[80dvh]">
-        <div className="flex-none">
-          <h1 className="section-title">Events</h1>
-          <input
-            type="text"
-            placeholder="Search"
-            onChange={(e) => setSearch(e.target.value)}
-            className="border-b-2 border-black/10 mb-4 w-full"
-          />
-          <div className="flex flex-row gap-4 mb-4">
-            <FilterTypeButton
-              type="Activity"
-              filterType={filterType}
-              setFilterType={setFilterType}
-            />
-            <FilterTypeButton
-              type="Panel"
-              filterType={filterType}
-              setFilterType={setFilterType}
-            />
-            <FilterTypeButton
-              type="Performance"
-              filterType={filterType}
-              setFilterType={setFilterType}
-            />
-          </div>
+      <section className="section flex flex-col h-[100dvh]">
+        <h1 className="section-title">Events</h1>
+        <div className="flex justify-center gap-2 mb-4">
+          <button
+            onClick={() => setViewMode("list")}
+            className={`px-2 py-1 rounded ${
+              viewMode === "list"
+                ? "bg-scottycon-blue text-black"
+                : "bg-gray-200 text-gray-700"
+            }`}
+          >
+            List View
+          </button>
+          <button
+            onClick={() => setViewMode("calendar")}
+            className={`px-2 py-1 rounded ${
+              viewMode === "calendar"
+                ? "bg-scottycon-blue text-black"
+                : "bg-gray-200 text-gray-700"
+            }`}
+          >
+            Calendar View
+          </button>
         </div>
-
-        <div className="flex-1 overflow-y-auto custom-scrollbar">
-          {Object.keys(groupByTime)
-            .sort()
-            .map((time) => (
-              <TimeSection
-                key={time}
-                time={time}
-                timeEvents={groupByTime[time]}
-                search={search}
-                filterType={filterType}
+        {viewMode === "list" ? (
+          <div className="flex flex-col flex-1 overflow-hidden">
+            <div className="flex-none">
+              <input
+                type="text"
+                placeholder="Search"
+                onChange={(e) => setSearch(e.target.value)}
+                className="border-b-2 border-black/10 mb-4 w-full flex-none"
               />
-            ))}
-        </div>
+              <div className="flex flex-row gap-4 mb-4">
+                <FilterTypeButton
+                  type="Activity"
+                  filterType={filterType}
+                  setFilterType={setFilterType}
+                />
+                <FilterTypeButton
+                  type="Panel"
+                  filterType={filterType}
+                  setFilterType={setFilterType}
+                />
+                <FilterTypeButton
+                  type="Performance"
+                  filterType={filterType}
+                  setFilterType={setFilterType}
+                />
+              </div>
+            </div>
+            <div className="flex-1 overflow-y-auto custom-scrollbar">
+              {Object.keys(groupByTime)
+                .sort()
+                .map((time) => (
+                  <TimeSection
+                    key={time}
+                    time={time}
+                    timeEvents={groupByTime[time]}
+                    search={search}
+                    filterType={filterType}
+                  />
+                ))}
+            </div>
+          </div>
+        ) : (
+          <div className="flex flex-col flex-1 overflow-hidden">
+            <h1 className="section-title flex-none">Events Calendar</h1>
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={(e) => setSearch(e.target.value)}
+              className="border-b-2 border-black/10 mb-4 w-full flex-none"
+            />
+            <div className="flex flex-row gap-4 mb-4 flex-none">
+              <FilterTypeButton
+                type="Activity"
+                filterType={filterType}
+                setFilterType={setFilterType}
+              />
+              <FilterTypeButton
+                type="Panel"
+                filterType={filterType}
+                setFilterType={setFilterType}
+              />
+              <FilterTypeButton
+                type="Performance"
+                filterType={filterType}
+                setFilterType={setFilterType}
+              />
+            </div>
+            <CalendarView search={search} filterType={filterType} />
+          </div>
+        )}
       </section>
     </main>
   );
