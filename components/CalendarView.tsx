@@ -6,6 +6,8 @@ interface CalendarViewProps {
   filterType: string;
 }
 
+type Event = typeof events[0];
+
 export default function CalendarView({ search, filterType }: CalendarViewProps) {
 
   const locations = Array.from(new Set(events.map((e) => e.location))).sort();
@@ -41,7 +43,7 @@ export default function CalendarView({ search, filterType }: CalendarViewProps) 
     return slotIndex >= 0 ? slotIndex : -1;
   };
 
-  const calculateRowSpan = (event: any) => {
+  const calculateRowSpan = (event: Event) => {
     const start = new Date(event.startTime).getTime();
     const end = new Date(event.endTime).getTime();
     const durationMinutes = (end - start) / (1000 * 60);

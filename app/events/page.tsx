@@ -94,35 +94,35 @@ export default function EventsPage() {
                 ))}
             </div>
           </div>
-) : (
-  <div className="flex flex-col flex-1 overflow-hidden">
-    <h1 className="section-title flex-none">Events Calendar</h1>
-    <input
-      type="text"
-      placeholder="Search"
-      onChange={(e) => setSearch(e.target.value)}
-      className="border-b-2 border-black/10 mb-4 w-full flex-none"
-    />
-    <div className="flex flex-row gap-4 mb-4 flex-none">
-      <FilterTypeButton
-        type="Activity"
-        filterType={filterType}
-        setFilterType={setFilterType}
-      />
-      <FilterTypeButton
-        type="Panel"
-        filterType={filterType}
-        setFilterType={setFilterType}
-      />
-      <FilterTypeButton
-        type="Performance"
-        filterType={filterType}
-        setFilterType={setFilterType}
-      />
-    </div>
-    <CalendarView search={search} filterType={filterType} />
-  </div>
-)}
+        ) : (
+          <div className="flex flex-col flex-1 overflow-hidden">
+            <h1 className="section-title flex-none">Events Calendar</h1>
+            <input
+              type="text"
+              placeholder="Search"
+              onChange={(e) => setSearch(e.target.value)}
+              className="border-b-2 border-black/10 mb-4 w-full flex-none"
+            />
+            <div className="flex flex-row gap-4 mb-4 flex-none">
+              <FilterTypeButton
+                type="Activity"
+                filterType={filterType}
+                setFilterType={setFilterType}
+              />
+              <FilterTypeButton
+                type="Panel"
+                filterType={filterType}
+                setFilterType={setFilterType}
+              />
+              <FilterTypeButton
+                type="Performance"
+                filterType={filterType}
+                setFilterType={setFilterType}
+              />
+            </div>
+            <CalendarView search={search} filterType={filterType} />
+          </div>
+        )}
       </section>
     </main>
   );
