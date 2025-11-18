@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BiSolidHome, BiSolidCalendarEvent, BiSolidBell, BiCool} from "react-icons/bi";
+import { BiSolidHome, BiSolidCalendarEvent, BiSolidBell, BiSolidBadge, BiSolidDonateHeart, BiCool} from "react-icons/bi";
 import React, { JSX } from "react";
 
 export default function Footer() {
@@ -16,18 +16,37 @@ export default function Footer() {
 
   return (
     <footer className="flex p-2 items-center justify-evenly sticky bottom-0 bg-white">
-      {linkButton("/", <BiSolidHome className="text-2xl" />, "Home")}
+      {linkButton(
+        "/",
+        <BiSolidHome className="text-2xl" />,
+        "Home"
+      )}
       {linkButton(
         "/events",
         <BiSolidCalendarEvent className="text-2xl" />,
         "Events"
       )}
-      {linkButton("/map", <BiSolidCalendarEvent className="text-2xl" />, "Map")}
+      {linkButton(
+        "/map",
+        <BiSolidCalendarEvent className="text-2xl" />,
+        "Map"
+      )}
       {linkButton(
         "/notifications",
         <BiSolidBell className="text-2xl" />,
         "Alerts"
       )}
+      {linkButton(
+        "/sponsors",
+        <BiSolidBadge className="text-2xl " />,
+        "Sponsors"
+      )}
+      {linkButton(
+        "/affiliates",
+        <BiSolidDonateHeart className="text-2xl" />,
+        "Affiliates"
+      )}
+      {linkButton("/artistAlley", <BiSolidCalendarEvent className="text-2xl" />, "Artist Alley")}
       {linkButton("/interestboard", <BiCool className="text-2xl" />, "Interest Board")}
     </footer>
   );
