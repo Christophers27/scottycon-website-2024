@@ -70,7 +70,7 @@ export function Artist(table: string, picture: string, description: string, memb
     )
 }
 
-export default function artistAlley() {
+export default function ArtistAlley() {
     const [expandedArtist, setExpandedArtist] = useState<string | null>(null);
 
     const toggleArtist = (tableName: string) => {
@@ -97,16 +97,16 @@ export default function artistAlley() {
                 {artists.map((artist) => {
                     return (
                         <React.Fragment key={artist.table}>
-                            <div key={artist.table} className="rounded-lg border-2 border-gray-200 shadow-gray-200 shadow-md overflow-hidden hover:shadow-xl transition-shadow flex transition-all duration-300" onClick={() => toggleArtist(artist.table)}>
+                            <div key={artist.table} className="rounded-lg border-2 border-gray-200 shadow-gray-200 shadow-md overflow-hidden hover:shadow-xl flex transition-all duration-300" onClick={() => toggleArtist(artist.table)}>
                             {expandedArtist !== artist.table && (
                                     <img
                                         src={artist.picture}
                                         alt={`${artist.table} logo`}
-                                        className="w-1/3 h-full object-cover flex-shrink-0 transition-all duration-400"
+                                        className="w-1/3 h-full object-cover shrink-0 transition-all duration-400"
                                     />
                                 )}
                             
-                            <div className="p-6 flex flex-col justify-between flex-grow transition-all duration-400">
+                            <div className="p-6 flex flex-col justify-between grow transition-all duration-400">
                                 <div>
                                     <div className="flex justify-between items-center">
                                         <h3 className="text-2xl font-bold text-gray-800 mb-3">
