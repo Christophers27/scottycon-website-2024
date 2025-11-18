@@ -53,23 +53,6 @@ const artists = [
     }
 ]
 
-export function Artist(table: string, picture: string, description: string, members: string){
-    return(
-        <section className="section">
-            <img src={picture} alt={`${table} logo`} className="w-32 h-32 object-contain mb-2" />
-            <h3 className="section-title">
-                {table}
-            </h3>
-            <p className="">
-                {description}
-            </p>
-            <p className="">
-                {members}
-            </p>
-        </section>
-    )
-}
-
 export default function ArtistAlley() {
     const [expandedArtist, setExpandedArtist] = useState<string | null>(null);
 
