@@ -5,6 +5,7 @@ import { events } from "@/lib/data";
 import EventCard from "@/components/eventCard";
 import { useFavorites } from "@/context/favoritesContext";
 import CalendarView from "@/components/CalendarView";
+import { createICSFile } from "@/lib/generateics";
 
 export default function EventsPage() {
   const [search, setSearch] = useState("");
@@ -27,8 +28,24 @@ export default function EventsPage() {
     {}
   );
 
+  const handleDownload = () => {
+    const icsContent = createICSFile(events);
+    const blob = new Blob([icsContent], { type: "text/calendar" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "scottycon_event_schedule.ics";
+    link.click();
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+    }, 0);
+  };
+
   return (
     <main className="page">
+      <div>
+        <button onClick={handleDownload}>Download Calendar</button>
+      </div>
       <section className="section flex flex-col h-[100dvh]">
         <h1 className="section-title">Events</h1>
         <div className="flex justify-center gap-2 mb-4">
