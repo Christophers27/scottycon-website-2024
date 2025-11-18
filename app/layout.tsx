@@ -63,7 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${quicksand.className} antialiased relative min-h-screen`}
+        className={`${quicksand.className} antialiased relative min-h-screen flex flex-col`}
       >
         <NotificationsProvider>
           <FavoritesProvider>
