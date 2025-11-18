@@ -46,6 +46,7 @@ export default function Footer() {
         <BiSolidDonateHeart className="text-2xl" />,
         "Affiliates"
       )}
+      {linkButton("/artistAlley", <BiSolidCalendarEvent className="text-2xl" />, "Artist Alley")}
     </footer>
   );
 }
