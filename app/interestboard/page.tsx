@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function () {
+export default function Page() {
   return (
     <main className="page gap-8">
       <section className="section">
