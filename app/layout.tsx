@@ -8,6 +8,7 @@ import OfflineDisplay from "@/components/offlineDisplay";
 import { FavoritesProvider } from "@/context/favoritesContext";
 import { NotificationsProvider } from "@/context/notificationContext";
 import AllowNotifications from "@/components/allowNotifications";
+import BugReport from "@/components/bugReport";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -80,6 +81,7 @@ export default function RootLayout({
             <AllowNotifications />
             <OfflineDisplay />
             {children}
+            <BugReport />
             <Footer />
           </FavoritesProvider>
         </NotificationsProvider>
